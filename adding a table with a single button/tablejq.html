@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tablefromat</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+name<input type="" name="" id="name"><br>
+password<input type="" name="" id="pwd"><br>
+confrom-password<input type="" name="" id="cofpwd"><br>
+<input type="button" name="" value="adduser" id="btn"><br>
+<input type="button" name="" value="getuser" id="getbtn">
+<ul>
+	<li><strong>name</strong></li>
+	<li><strong>password</strong></li>
+	<li><strong>mobilenumber</strong></li>
+</ul>
+<div id="table"></div>
+<style >
+ul {
+float: left;
+width: 100%;
+margin: 0;
+}
+	li {
+
+margin-left: 11px;
+float: left;
+width: 89px;
+border: 1px solid;
+padding: 0 10px;
+margin: 0;
+list-style-type: none;
+}
+
+</style>
+<script>
+var users=[];
+	$(document).ready(function(){
+
+		$("#btn").click(function(){
+		var name=$("#name").val()
+		var password=$("#pwd").val()
+		var repassword=$("#cofpwd").val()
+       var user={"name":name,"password":password,"repassword":repassword}
+       users.push(user)
+       console.log(users)
+	});
+	});
+	$("#getbtn").click(function(){
+		var content="";
+		for (i=0;i<users.length;i++){
+			content=content +"<ul><li>"+users[i]["name"]+"</li><li>"+users[i]["password"]+"</li><li>"+users[i]["repassword"]+"</li></ul>"
+		}
+
+              $("#table").append(content);  
+  		});
+		</script>
+		
+
+
+</body>
+</html>

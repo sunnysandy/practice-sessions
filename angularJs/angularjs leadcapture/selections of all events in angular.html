@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>template3</title>
+	<link rel="stylesheet" type="text/css" href="leadcapture.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script type="text/javascript" src="selectionsofallevents.js"></script>
+</head>
+<form name="uservalid">
+<body ng-app="myapp" ng-controller="myctrl">
+<div class="CAPTURE">
+	     <input type="" name="" value="1   |   LEAD CAPTURE" class="lead">
+</div>
+<div class="main">
+       <div class="Headline">
+             <h3  ng-class="label" class="label" style="font-family:{{choosefont}};color: {{colorpick}}" >Headline</h3>
+            <input type="text" name="headline"  class="head" id="headline"  ng-model="headline"  ng-style="uservalid.headline.$touched && uservalid.headline.$error && {'border-color':'red'} || {'border-color': ''}"  required="required"><span class="a">A</span>
+            
+       </div>
+
+<div class="Sub-Headline">
+        <h3 class="label" ng-class="label" style="font-family:{{choosefont}};color: {{colorpick}}">Sub-Headline</h3>
+</div>
+         <input type=""  class="head" id="subhead" name="subheadline" ng-model="subheadline" ng-style="uservalid.subheadline.$touched && uservalid.subheadline.$error && {'border-color':'red'} || {'border-color': ''}"  required="required"><span class="a">A</span>
+
+
+<div class="url">
+      <h3 class="label" ng-class="label" style="font-family:{{choosefont}};color: {{colorpick}}">Sucees URL</h3>
+      <input type="" name="suceesurl" class="head" id="sucessurl" ng-model="suceesurl" ng-style="uservalid.suceesurl.$touched && uservalid.suceesurl.$error && {'border-color':'red'} || {'border-color': ''}"  required="required">
+</div>
+
+<div class="USER">
+	     <h3 class="label" ng-class="label" style="font-family:{{choosefont}};color: {{colorpick}}">USER INFO</h3><hr class="h">
+</div>
+</div>
+
+<div class="checkboxes">
+ <input type="checkbox" ng-model="emailbox"   id="box" ng-click="email()">Ask email address
+  <input type="checkbox" ng-model="namebox" id="box1" ng-click="name()">Ask user name
+  
+</div>
+<span ng-show="myshow">select any checkbox</span>
+ </form>
+   <div class="at">
+       <h3 class="label" ng-class="label" style="font-family:{{choosefont}};color: {{colorpick}}">SHOW AT</h3><hr class="h">
+    </div>
+
+   <div class="video">
+     <input type="checkbox" name="" id="start" ng-model="startvideo" ng-change="videostart()"> Video Start <input type="checkbox" name="" id="end" ng-model="endvideo" ng-change="videoend()"> Video End
+       <input type="checkbox" name="" id="time" ng-model="time" ng-change="customtime()">	custom Time()
+  </div>
+
+<div class="videotag">
+      <video id="videocontrols" ng-model="videocontrol" width="400" controls>
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+     <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+     Your browser does not support HTML5 video.
+    </video>	
+</div>
+
+<div class="but">
+	<h3 class="label" style="font-family:{{choosefont}};color: {{colorpick}}">BUTTON</h3><hr class="h">
+</div>
+
+<div class="label" ng-class="label">
+    <input type="" name="" value="label" class="lab">
+    <select class="opt"  ng-model="choosefont" id="choosefont"  ng-style="mystyle">
+        <option>A</option>
+        <option>font-family </option>
+	     <option>serif</option> 
+	     <option>sans-serif</option>
+	     <option>cursive</option> 
+	     <option>fantasy</option> 
+	     <option> monospace</option>
+   </select>
+</div>
+<div class="labcolor" >
+                  Label Color
+               <input type="radio" id="radio1" value="green" ng-model="colorpick" name="radio"   >
+              <label for="radio1" style="background: green;"></label>
+             <input type="radio" value="red" ng-model="colorpick" id="radio2" name="radio"  >
+             <label for="radio2" style="background:red; "></label>
+             <input type="radio" name="radio" value="yellow" ng-model="colorpick" id="radio3"  >
+            <label for="radio3" style="background:yellow;"></label>
+</div>
+
+<div id="btnshape">
+      Buttonshape   <input type="radio"  ng-model="roundValue" value="round"  name="radio" id="radio4"  > Rounded
+      <label for="radio4" style="background:skyblue;"></label>
+        square <input type="radio" name="radio" id="raido5" ng-model="roundValue" value="circle" >
+         <label for="raido5" style="background:red;"></label>
+
+	
+</div>
+<div class="buttoncolor">
+      Buttoncolors <input type="radio" name="radio" id="radio6" value="yellow" ng-model="darkbluecolor">
+                <label for="radio6" style="background:yellow;"></label>
+                <input type="radio" name="radio" id="radio7" value="blue" ng-model="darkbluecolor" >
+                <label for="radio7" style="background:skyblue;"></label>  
+
+                <input type="radio" name="radio" id="radio8" value="pink" ng-model="darkbluecolor">
+                <label for="radio8" style="background:pink;"></label>  
+
+                <input type="radio" name="radio" id="radio9" value="green"  ng-model="darkbluecolor">
+                <label for="radio9" style="background:darkblue;"></label>  
+	
+</div>
+<div class="hover"> 
+               <input type="checkbox" name=""> allowskip<img src="https://cdn.pixabay.com/photo/2016/11/21/17/47/question-1846784_960_720.jpg" class="image" ng-mouseover="divshow()" ng-mouseout="divhidden()">
+            <div ng-show="inorout"> tool tip</div>
+</div>
+<div class="button">
+<!-- <input type="button" style="color:{{darkbluecolor}}" name="" value="Addd Lead Capture" class="" id="butt" ng-click="submit()"> -->
+
+	  <input type="button"  style="background-color:{{darkbluecolor}}" 
+ ng-style="roundValue=='round'&&{'border-radius':'50%'} || roundValue=='circle'&& {'border-radius':'0'}"
+ 
+     name="" value="Addd Lead Capture" class="" id="butt" ng-click="submit()">
+</div>
+
+</div>
+</body>
+</html>

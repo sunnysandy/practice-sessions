@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>drag and drop image</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+ 
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+	.col-lg-8.col-lg-offset-2 {
+    background-color: antiquewhite;
+    padding: 160px;
+    border: 1px solid black;
+    margin-top: 27px;
+}
+
+img {
+    width: 38%;
+    margin-left: 39px;
+    padding-top: 39px;
+}
+</style>
+<body class="container-fluid">
+	<div class="row" ondrop="drop(event)" ondragover="allowDrop(event)">
+<div class="col-lg-8 col-lg-offset-2">
+	</div>
+</div>
+	<div class="row">
+		<div class="col-lg-4">
+			<img src="img1.jpg" id="drag1"  draggable="true" ondragstart="drag(event)" >
+		</div>
+		<div class="col-lg-4">
+			<img src="img2.jpg" id="drag2"  draggable="true" ondragstart="drag(event)">
+		</div>
+		<div class="col-lg-4">
+			<img src="img3.jpg" id="drag3"  draggable="true" ondragstart="drag(event)">
+		</div>
+	</div>
+<script>
+	function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+    $("#"+ev.dataTransfer.getData("text")).css("width","400px")
+}
+</script>
+</body>
+</html>

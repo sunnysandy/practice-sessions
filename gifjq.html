@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js""></script>
+<link rel="stylesheet"  href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
+	<title>gif</title>
+</head>
+<body>
+	<div id="textDiv">
+		<input type="" name="" value="" id="value">
+		<input type="button" name="" value="next" id="btn"><br>
+	</div>
+	<div id="happyDiv" style="display: none;">
+		
+		<input type="radio" name="smiley" id="firstsmile"><i class="fa fa-smile-o" aria-hidden="true" style="background:yellow" ></i>
+		<input type="radio" name="smiley" id="secondsmile"><i class="fa fa-smile-o" aria-hidden="true" style="background: pink"></i><br>
+		<input type="button" name="" value="nextstep" id="nxt">
+	</div>
+<div id="mydiv" style="display: none;">hello
+	
+</div>
+
+<script>
+$(document).ready(function() {
+	
+		$("#btn").click(function(){
+			$("#textDiv").css({"display":"none"});
+			$("#happyDiv").css({"display":"block"})
+			var a=$("#value").val();
+			$("#mydiv").append(a)
+		});
+		$("#nxt").click(function(){
+			$("#happyDiv").css({"display":"none"})
+			$("#mydiv").css({"display":"block"})
+		});
+		
+});
+</script>
+
+</body>
+</html>

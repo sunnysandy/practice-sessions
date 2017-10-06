@@ -1,0 +1,596 @@
+.navpadding .navbar {
+    position: relative;
+    min-height: 815px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    background-image: url(images/first-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+    background-color: black;
+}
+  .navbar-brand h1  {
+    margin-top: 8px;
+    font-size: 25px;
+    color: rgba(245, 245, 245, 0.68);
+} 
+   ul.nav.navbar-nav.navbar-right {
+    margin-top: 11px;
+    height: 67px;
+    font-size: small;
+}
+button {
+    border-radius: 40px;
+    background: transparent;
+    border-color: rgba(212, 201, 201, 0.65);
+}
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: rgba(25, 20, 20, 0.53);
+}
+span {
+    color: ghostwhite;
+    font-weight: 600;
+}
+
+button {
+    border-radius: 44px;
+    background-color: black;
+    border-color: rgba(169, 100, 100, 0.95);
+    margin:-3px;
+}
+div#firstimagetext {
+    text-align: center;
+    margin-top: 308px;
+  color: darkgrey;
+}
+hr.hrline {
+    border-color: black;
+    width: 37%;
+}
+h3#hrtest {
+    text-align: center;
+    color: rgba(19, 13, 13, 0.89);
+    font-weight: bold;
+}
+input#exampleInputName2 {
+    padding: 25px;
+    border-color: white;
+    background-color: rgba(197, 187, 187, 0.61);
+    font-weight: bolder;
+    border-style: solid;
+    width: 91%;
+    font-weight: bolder;
+    color: white;
+}
+input#exampleInputEmail2 {
+    padding: 25px;
+    border-color: white;
+    background-color: rgba(197, 187, 187, 0.61);
+    font-weight: bolder;
+    border-style: solid;
+    width: 91%;
+    margin-left: -18px;
+    font-weight: bolder;
+    color: white;
+
+}
+form.form-inline {
+    margin-left: 341px;
+    margin-top: 32px;
+}
+button.btn.btn-default {
+    padding: 15px;
+    width: 17%;
+    margin-left: -29px;
+    background-color: rgba(236, 13, 52, 0.76);
+    border: none;
+    font-size: medium;
+    color: white;
+}
+h2#secondheading {
+    text-align: center;
+    font-size: 28px;
+}
+
+  hr.secondhr {
+    border-color: skyblue;
+    border-width: medium;
+    width: 3%;
+}
+p#secondpara {
+    text-align: center;
+    font-weight: bold;
+    color: rgba(142, 134, 134, 0.85);
+    font-family: sans-serif;
+}
+hr.thirdhr {
+    border-color: darkgray;
+    border-width: thin;
+    width: 72%;
+    float: left;
+    margin-left: 33px;
+    margin-top: 49px;
+}
+    i.fa.fa-clock-o {
+    font-size: 4em;
+    color: skyblue;
+    margin-top: 20px;
+    margin-left: -37px;
+}
+   
+hr.fourthhr {
+    border-color: darkgray;
+    border-width: thin;
+    width: 149%;
+    margin-top: 50px;
+    margin-left: -206px;
+}
+i.fa.fa-pie-chart {
+    font-size: 4em;
+    color: skyblue;
+    margin-left: -120px;
+    margin-top: 23px;
+}
+
+hr.fifthhr {
+    border-color: darkgray;
+    border-width: thin;
+    width: 178%;
+    margin-top: 51px;
+    margin-left: -274px;
+}
+i.fa.fa-map-marker {
+    font-size: 4em;
+    color: skyblue;
+    margin-left: -131px;
+    margin-top: 20px;
+}
+
+hr.sixthhr {
+    border-color: darkgray;
+    border-width: thin;
+    width: 183%;
+    float: right;
+    margin-top: 51px;
+    margin-right: 128px;
+}
+h1#headingstep {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgba(29, 23, 23, 0.65);
+    margin-left: 103px;
+    font-family: inherit;
+    margin-top: 33px;
+}
+p.lorempara {
+    width: 53%;
+    line-height: 28px;
+    margin-left: 105px;
+    color: rgb(152, 148, 148);
+    font-family: sans-serif;
+    margin-top: -17px;
+}
+    button.btn.btn-info {
+    margin-left: 142px;
+    border-radius: none;
+    border: none;
+    margin-top: -13px;
+}
+div#phaseheadingdiv {
+    margin-top: 0px;
+    margin-left: -70px;
+}
+h1#phaseheading {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgba(29, 23, 23, 0.65);
+    margin-left: 103px;
+    font-family: inherit;
+    margin-top: 37px;
+    margin-left: 133px;
+}
+h1#finalheading {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgba(29, 23, 23, 0.65);
+    margin-left: 103px;
+    font-family: inherit;
+    margin-top: 37px;
+    margin-left: 191px;
+}
+
+p#finallorempara {
+    width: 53%;
+    line-height: 28px;
+    margin-left: 162px;
+    color: rgb(152, 148, 148);
+    font-family: sans-serif;
+    margin-top: -17px;
+}
+button#finalexplorebtn {
+    margin-left: 210px;
+    border: none;
+    margin-top: -13px;
+}
+img#thirdimage {
+    width: 90%;
+    margin-left: 50px;
+    margin-top: 115px;
+}
+button#projectbut {
+    margin-top: -814px;
+    margin-left: 69px;
+}
+img#jacknilimage {
+    height: 49px;
+    margin-left: 15px;
+    margin-top: 3px;
+}
+span#jack {
+    color: gray;
+    margin-left: 13px;
+    font-size: small;
+    font-stretch: expanded;
+    font-family: inherit;
+}
+h1#missionheading {
+    width: 73%;
+    font-size: x-large;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: rgba(0, 0, 0, 0.62);
+    margin-top: -31px;
+    margin-left: -25px;
+    padding: 43px;
+    line-height: 39px;
+}
+p#lorempara {
+    width: 53%;
+    line-height: 28px;
+    margin-left: 22px;
+    color: rgb(152, 148, 148);
+    font-family: sans-serif;
+    margin-top: -64px;
+}
+button#missionbtn {
+    margin-left: 23px;
+    border: none;
+    margin-top: 13px;
+    
+}
+div#missionbackground {
+    background-color: rgba(248, 248, 255, 0.78);
+    width: 35%;
+    margin-right: 6px;
+    margin-top: -444px;
+    padding: 8px;
+}
+div#page3div {
+    background-color: rgba(0, 0, 0, 0.08);
+    margin-top: 82px;
+}
+img#sixthimage {
+    width: 100%;
+    margin-top: 4px;
+    
+}
+h3#weneverheading {
+    text-align: center;
+    margin-top: -825px;
+    color: white;
+    font-weight: bold;
+}
+
+#rcorners2 {
+    border-radius: 50%;
+    border: 2px solid red;
+    padding: 20px; 
+    width: 200px;
+    height: 150px;    
+}
+h1.currenthead {
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    font-family: inherit;
+    margin-left: 123px;
+    margin-top: 113px;
+}
+p.currentlorempara {
+    font-size: initial;
+    width: 79%;
+    line-height: 30px;
+    font-weight: bold;
+    font-family: serif;
+    color: rgb(181, 176, 172);
+    margin-left: 67px;
+   }
+   div#butpage {
+    margin-top: 73px;
+}
+  button#latestbtn {
+    width: 102%;
+    margin-left: 34px;
+    color: skyblue;
+    background-color: rgba(255, 255, 255, 0.25);
+    font-weight: bolder;
+    font-family: initial;
+    border: none;
+}
+button#btnblog {
+    width: 76%;
+    margin-left: 0px;
+    padding: 15px;
+    border: none;
+    color: rgba(128, 128, 128, 0.9);
+    background-color: rgba(211, 211, 211, 0.48);
+    font-weight: bold;
+    font-family: serif;
+}
+button#froumbtn {
+    width: 124%;
+    border: none;
+    margin-left: -76px;
+        padding: 15px;
+    color: rgba(128, 128, 128, 0.9);
+    background-color: rgba(211, 211, 211, 0.48);
+    font-weight: bold;
+    font-family: serif;
+}
+button#userbtn{
+
+	 width: 76%;
+    margin-left: -58px;
+    padding: 15px;
+    border: none;
+    color: rgba(128, 128, 128, 0.9);
+    background-color: rgba(211, 211, 211, 0.48);
+    font-weight: bold;
+    font-family: serif;
+}
+button#emptybtn {
+    width: 131%;
+    padding: 26px;
+    margin-left: -134px;
+    border: none;
+    background-color: rgb(247, 244, 244);
+}
+h1.frameworkhead {
+    margin-left: 80px;
+    margin-top: -22px;
+    font-size: x-large;
+    word-spacing: -1px;
+    letter-spacing: -2px;
+    color: rgb(146, 142, 142)
+}
+i.fa.fa-connectdevelop {
+    margin-top: 118px;
+    margin-left: 59px;
+}
+p#paraframe {
+    color: rgba(128, 128, 128, 0.78);
+    width: 100%;
+    word-spacing: 3px;
+    margin-left: 63px;
+    font-size: initial;
+    margin-top: -10px;
+}
+i.fa.fa-cubes{
+    margin-top: 31px;
+    margin-left: 59px;
+}
+h1.hightesthead{
+    margin-left: 80px;
+    margin-top: -26px;
+    font-size: x-large;
+    word-spacing: -1px;
+    letter-spacing: -2px;
+    color: rgb(146, 142, 142)
+}
+i.fa.fa-thumbs-o-up {
+    margin-left: 51px;
+    padding: 7px;
+    margin-top: 25px;
+}
+button#explorebtn {
+    padding: 11px;
+    width: 22%;
+    border: none;
+    margin-top: 16px;
+    margin-left: 58px;
+}
+img#collectionsimage {
+    width: 85%;
+    margin-left: 79px;
+    height: 431px;
+    margin-top: 114px;
+}
+div#collectionbackground {
+    background-color: rgb(252, 252, 255);
+}
+h2#protfolioheading {
+    text-align: center;
+    font-size: 28px;
+    margin-top: 102px;
+    color: rgba(0, 0, 0, 0.69);
+    font-family: -webkit-pictograph;
+}
+
+div#protfilopage {
+    background-color: rgba(236, 232, 232, 0.41);
+    margin-top: 28px;
+}
+p#showcasingpara {
+    font-family: serif;
+    color: gray;
+    margin-left: 440px;
+    margin-top: 28px;
+}
+img#installcollectionpic {
+    width: 100%;
+    margin-top: 20px;
+}
+button#tablebtn {
+    padding: 9px;
+    width: 11%;
+    background-color: rgba(236, 13, 52, 0.76);
+    border: none;
+    font-size: medium;
+    color: white;
+    float: right;
+    margin-right: 45px;
+    margin-top: 82px;
+}
+h1#purchasehead {
+    word-spacing: -4px;
+    font-family: serif;
+    margin-left: 46px;
+    font-weight: bold;
+    font-size: x-large;
+    margin-top: 85px;
+    word-spacing: -5px;
+}
+div#tablepage {
+     width: 105%;
+    margin-top: 30px;
+}
+thead {
+    font-family: initial;
+    font-size: x-large;
+    color: gray;
+}
+tbody {
+    font-size: initial;
+    font-family: serif;
+    font-weight: bold;
+    color: darkgrey;
+}
+button#purchasebtn1 {
+    margin-top: 16px;
+    width: 57%;
+    padding: 12px;
+    border: none;
+    margin-left: -21px;
+}
+button#purchasebtn2 {
+    padding: 13px;
+    width: 37%;
+    margin-top: 14px;
+    border: none;
+    margin-left: 10px;
+}
+button#purchasebtn3 {
+    width: 37%;
+    margin-top: 14px;
+    border: none;
+    margin-left: 14px;
+    padding: 13px;
+}
+strong#no100 {
+    margin-left: 33px;
+}
+strong#no10 {
+    margin-left: 20px;
+}
+span#ok1 {
+    margin-left: 20px;
+}
+span#ok2 {
+    margin-left: 41px;
+}
+span#ok3 {
+    margin-left: 58px;
+}
+i#dollar {
+    margin-left: 20px;
+}
+i#dollar2 {
+    margin-left: 40px;
+}
+i#dollar3 {
+    margin-left: 53px;
+}
+div#circleshape1 {
+    border-style: solid;
+    width: 200px;
+    height: 200px;
+    border-radius: 108px;
+    text-align: center;
+    padding-top: 76px;
+    border-color: #ef6060;
+    font-size: xx-large;
+    margin: auto;
+    color: #fff;
+    font-family: initial;
+}
+div#circleshape2 {
+    border-style: solid;
+    width: 200px;
+    height: 200px;
+    border-radius: 108px;
+    text-align: center;
+    padding-top: 76px;
+    border-color: #ef6060;
+    font-size: xx-large;
+    margin: auto;
+    color: #fff;
+    font-family: initial;
+    margin-left: 224px;
+}
+div#circleshape3 {
+    border-style: solid;
+    width: 200px;
+    height: 200px;
+    border-radius: 108px;
+    text-align: center;
+    padding-top: 76px;
+    border-color: #ef6060;
+    font-size: xx-large;
+    margin: auto;
+    color: #fff;
+    font-family: initial;
+    margin-left: 250px;
+}
+/*hr.circlehr {
+    border-color: skyblue;
+    border-width: medium;
+    width: 3%;
+}*/
+div#footerpage {
+    background-color: rgba(0, 0, 0, 0.66);
+    padding: 42px;
+    margin-top: 10px;
+}
+
+
+div#circlepage {
+    margin-top: 291px;
+    margin-left: 145px;
+}
+p#copypara {
+    color: lightgray;
+}
+i.fa.fa-twitter-square {
+    float: right;
+    font-size: 2em;
+    margin-right: 70px;
+    margin-left: -133px;
+    color: rgba(211, 211, 211, 0.48);
+}
+i.fa.fa-facebook-official {
+    float: right;
+    font-size: 2em;
+    margin-left: -53px;
+    margin-right: 42px;
+    color: rgba(211, 211, 211, 0.52);
+}
+i.fa.fa-youtube-play {
+    float: right;
+    font-size: 2em;
+    margin-right: -2px;
+    color: rgba(211, 211, 211, 0.52);
+}

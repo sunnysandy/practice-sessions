@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>step provider</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.js"></script>
+</head>
+<body ng-app="routerApp" class="container-fluid">
+    <nav class="navbar navbar-inverse">
+        <div>
+            <div class="navbar-header">
+                <a class="navbar-brand" ui-sref="#">WebSiteName</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a ui-sref="home">home</a></li>
+                <li><a ui-sref="login">login</a></li>
+                <li><a ui-sref="register">register</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div ui-view></div>
+    <script src='app.js'></script>
+    <script src="controller.js"></script>
+
+
+</body>
+</html>

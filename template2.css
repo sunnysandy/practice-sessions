@@ -1,0 +1,99 @@
+
+.content {
+float: left;
+}
+.content label {
+color: rgba(128, 0, 0, 1);
+}
+.inputstyle {
+width: 154%;
+padding: 8px;
+border-radius: 8px;
+border-color: rgba(128, 0, 0, 0.24);
+background-color: rgba(219, 122, 122, 0.29);
+}
+.content1{
+	float:right;
+	margin-right: 324px;
+}
+.content1 label{
+	color: rgba(128, 0, 0, 1);
+	margin-left: 14px;
+
+}
+.content1 select{
+	width: 226%;
+padding: 8px;
+border-radius: 7px;
+border-color: rgba(128, 0, 0, 0.24);
+background-color: rgba(219, 122, 122, 0.29);
+color: rgba(219,122,122,0.29);
+margin-top: -4px;
+margin-left: 21px;
+margin-right: 24px;
+}
+.content2 {
+float: left;
+margin-top: 202px;
+margin-left: -172px;
+}
+.content2 label {
+color: maroon;
+}
+.inpt {
+width: 154%;
+padding: 8px;
+border-radius: 8px;
+border-color: rgba(128, 0, 0, 0.24);
+background-color: rgba(219, 122, 122, 0.29);
+
+}
+.content3 {
+float: right;
+margin-top: 217px;
+margin-right: -206px;
+}
+.content3 label {
+color: maroon;
+}
+.content4 {
+float: left;
+margin-top: 351px;
+margin-left: -170px;
+}
+.content4 select {
+width: 445%;
+padding: 8px;
+border-color: skyblue;
+margin-top: -4px;
+margin-left: -1px;
+margin-right: 24px;
+color: rgba(226, 215, 215, 0.98);
+}
+.content5 {
+float: left;
+margin-top: 448px;
+margin-left: -179px;
+color: maroon;
+}
+.button4{
+	padding: 4px;
+width: 37%;
+margin-left: 5px;
+margin-top: 15px;
+background-color: rgb(23, 148, 218);
+border-radius: 6px;
+}
+.content6{
+	padding: 47px;
+float: left;
+margin-top: 573px;
+margin-left: -225px;
+color: maroon;
+background-color: rgba(194, 37, 37, 0.16);
+width: 39%;
+border-color: rgba(29, 28, 28, 0.86);
+border-radius: 9px;
+}
+li {
+margin-left: -42px;}

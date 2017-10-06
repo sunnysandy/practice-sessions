@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>template3</title>
+	<link rel="stylesheet" type="text/css" href="leadcapture.css">
+	<script type="text/javascript" src="leadcapture.js"></script>
+	
+</head>
+<body>
+<div class="CAPTURE">
+	     <input type="" name="" value="1   |   LEAD CAPTURE" class="lead">
+</div>
+<div class="main">
+       <div class="Headline">
+             <h3 class="label">Headline</h3>
+            <input type="text" name="" class="head" id="headline" onblur="line()"><span class="a">A</span>
+       </div>
+
+<div class="Sub-Headline">
+        <h3 class="label">Sub-Headline</h3>
+         <input type="" name="" class="head" id="subhead" onblur="subline()"><span class="a">A</span>
+</div>
+
+<div class="url">
+      <h3 class="label">Sucees URL</h3>
+      <input type="" name="" class="head" id="sucessurl" onblur="url()">
+</div>
+
+<div class="USER">
+	     <h3 class="label">USER INFO</h3><hr class="h">
+</div>
+</div>
+
+<div class="checkboxes">
+ <input type="checkbox" name="" id="box" >Ask email address <input type="checkbox" name="" id="box1">Ask user name
+</div>
+
+   <div class="at">
+       <h3 class="label">SHOW AT</h3><hr class="h">
+    </div>
+
+   <div class="video">
+     <input type="checkbox" name="" id="start" onchange="videostart()"> Video Start <input type="checkbox" name="" id="end" onchange="videoend()"> Video End
+       <input type="checkbox" name="" id="time" onchange="customtime()">	custom Time()
+  </div>
+
+<div class="videotag">
+      <video id="videocontrols" width="400" controls>
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+     <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+     Your browser does not support HTML5 video.
+    </video>	
+</div>
+
+<div class="but">
+	<h3 class="label">BUTTON</h3><hr class="h">
+</div>
+
+<div class="label">
+    <input type="" name="" value="label" class="lab">
+     <select class="opt" id="choosefont" onchange="changingfont()">
+        <option>A</option>
+        <option>font-family</option>
+	     <option>serif</option> 
+	     <option>sans-serif</option>
+	     <option>cursive</option> 
+	     <option>fantasy</option> 
+	     <option> monospace</option>
+   </select>
+</div>
+<div class="labcolor">
+                  Label Color
+               <input type="radio" id="radio1" name="radio" onchange="colorFun('green')">
+              <label for="radio1" style="background: green;"></label>
+             <input type="radio" id="radio2" name="radio" onchange="colorFun('red')" >
+             <label for="radio2" style="background:red; "></label>
+             <input type="radio" name="radio" id="radio3" onchange="colorFun('yellow')" >
+            <label for="radio3" style="background:yellow;"></label>
+</div>
+
+<div id="btnshape">
+      Buttonshape   <input type="radio" name="radio" id="radio4"  onchange="colorbtn('cricle')"> Rounded
+      <label for="radio4" style="background:skyblue;"></label>
+        square <input type="radio" name="radio" id="raido5"  onchange="colorbtn('squ')">
+         <label for="raido5" style="background:red;"></label>
+
+	
+</div>
+<div class="buttoncolor">
+                Buttoncolors <input type="radio" name="radio" id="radio6" onchange="colorchanges('white')">
+                <label for="radio6" style="background:white;"></label>
+                <input type="radio" name="radio" id="radio7" onchange="colorchanges('skyblue')">
+                <label for="radio7" style="background:skyblue;"></label>  
+
+                <input type="radio" name="radio" id="radio8" onchange="colorchanges('pink')">
+                <label for="radio8" style="background:pink;"></label>  
+
+                <input type="radio" name="radio" id="radio9" onchange="colorchanges('darkblue')">
+                <label for="radio9" style="background:darkblue;"></label>  
+	
+</div>
+<div class="hover"> 
+               <input type="checkbox" name=""> allowskip<img src="https://cdn.pixabay.com/photo/2016/11/21/17/47/question-1846784_960_720.jpg" class="image" onmouseover="divshow()" onmouseout="divhidden()">
+            <div id="inorout" style="display: none;"> tool tip</div>
+</div>
+<div class="button">
+	  <input type="button" name="" value="Addd Lead Capture" class="" id="butt" onclick="submit()">
+</div>
+
+</div>
+</body>
+</html>

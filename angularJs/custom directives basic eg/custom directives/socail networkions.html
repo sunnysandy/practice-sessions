@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>social network icons</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+</head>
+<body ng-app="myapp">
+<My-directive></My-directive>
+<input type="text" onremove>
+    <input type="text" onremove>
+    <input type="text" onremove>
+</body>
+<script >
+	var app=angular.module("myapp",[]);
+	/*app.directive("myDirective",function(){
+     return {
+      templateUrl:"image.html",
+      restrict:"E"
+
+     };
+
+
+	});
+    */
+    app.directive("onremove",function(){
+     return {
+     
+      restrict:"A",
+
+ 
+         link:function(scope,ele,attr){
+             ele.bind("click",function(){
+                 ele.val("");
+             })
+         }
+
+    }
+	});
+
+</script>
+</html>

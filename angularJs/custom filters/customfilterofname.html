@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.min.js"></script>
+
+</head>
+<body ng-app="myapp" ng-controller="myctrl">
+<input type="text" name="" ng-model="languagefamily">
+<ul>
+	<li ng-repeat="name in names |customfilter:languagefamily">{{name}}</li>
+</ul>
+
+</body>
+<script type="text/javascript">
+	var app=angular.module("myapp",[]);
+	app.controller("myctrl",function ($scope) {
+		$scope.names=[{"lang":"java","type":"server"},
+		{"lang":"jquery","type":"client"},
+		{"lang":"javascript","type":"client"},
+		{"lang":"node","type":"server"}
+		
+		];
+	});
+	app.filter("customfilter",function(){
+		return function(lang,type){
+		   var arr=[];
+
+			if(type==undefined||type=="")
+			{
+           		return lang;
+
+			}
+        
+			for(i=0;i<lang.length;i++){
+				if (lang[i].type==type) {
+					arr.push(lang[i])
+				}
+			}
+			return arr;
+		}
+		
+	})
+</script>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+ 
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title>edit delete add</title>
+</head>
+<body>
+<table class="table" id="bind">
+	<thead>
+		<th>
+			sno:
+		</th>
+		<th>name</th>
+		<th>country</th>
+		<th>location</th>
+		<th>pincode</th>
+		<th>edit</th>
+		<th>delete</th>
+		<th><button class="adding">add</button></th>
+	</thead>
+	<tbody>
+		<tr >
+			<td class="no">1</td>
+			<td class="name">	 name:<input type="text" name=""  class="namevalue"></td>
+			<td class="country"> country:<input type="text" name="" class="countryvalue"></td>
+			<td class="location"> location: <input type="text" name="" class="locationvalue" ></td>
+			<td class="pincode">pincode:<input type="text" name="" class="pincodevalue" ></td>
+			<td ><button type="button" class="editvalue"><span class="glyphicon glyphicon-pencil"></span></button></td>
+			<td><button type="button" class="delete"><span class="glyphicon glyphicon-remove"></span></button></td>
+		</tr>
+
+	</tbody>
+</table>
+<div class="mydiv"></div>
+<script>
+$(document).ready(function(){
+	
+	var i=1
+$(".adding").click(function(){
+i++;
+var content="<tr><td class='no'>"+i+"</td><td class='name'>"+$(".namevalue").val()+"</td><td class='location'>"+$(".locationvalue").val()+"</td><td class='country'>"+$(".countryvalue").val()+"</td><td class='pincode'>"+$(".pincodevalue").val()+"</td><td >"+"<button class='editvalue'><span class='glyphicon glyphicon-pencil'></span></button>"+"</td><td>"+"<button class='delete'><span class='glyphicon glyphicon-remove'></span></button>"+"</td></tr>"
+$("#bind").append(content);
+$(".delete").click(function(){
+			$(this).closest("tr").hide()
+
+	});	
+$(".editvalue").click(function(){
+	$("tr").removeClass("active")
+$(this).closest("tr").addClass("active")
+var $this=$(this).closest("tr");
+var edit="<tr><td>"+"name:<input type='text' value='"+$this.find('.name').text()+"' class='names'>"+"</td><td>"+"country:<input type='text' class='countries' value='"+$this.find('.location').text()+"'>"+"</td><td>"+"location:<input type='text' class='locations' value='"+$this.find('.country').text()+"'>"+"</td><td>"+"pincode:<input type='text' class='pincodes' value='"+$this.find('.pincode').text()+"'>"+"</td><td>"+"<button type='button' class='savebtn'>savechange</button>"+"</td></tr>"
+$(".mydiv").html(edit);
+
+$(".savebtn").click(function(){
+	$("tr.active").find(".name").text($(".names").val())
+    $("tr.active").find(".country") .text($(".countries").val())  
+     $("tr.active").find(".location").text($(".locations").val())
+    $("tr.active").find(".pincode").text($(".pincodes").val())
+    
+})
+
+})
+})
+
+
+})	
+
+</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+	<title>ng-repeat</title>
+</head>
+<body ng-app="myapp" ng-controller="myctrl">
+<table>
+<tr>
+<td>filtername:<input ng-model="f.Name"></td>
+<td>filtercity:<input ng-model="f.City"></td>
+<td>filtercountry:<input ng-model="f.Country"></td>
+</tr>
+
+	<tr>
+		<th>Name</th> <th>City</th><th>Country</th>
+
+	</tr>
+
+	<tr ng-repeat="record in  records |filter:f"><td>{{record.Name}}</td><td>{{record.City}}</td><td>
+	{{record.Country}}</td>
+	<td><button ng-click="addme()">Add</button></td>
+	<td><button ng-click="deleteuser($index)">delete</button></td>
+	<td><button ng-click="edit(record)">edit</button></td>	
+	
+		</tr>
+	
+</table>
+
+<table>
+	<tr>
+<td><input ng-model="Name"></td>
+<td><input ng-model="City"></td>
+<td><input ng-model="Country"></td>
+
+<td><button ng-click="Editsave()">save</button></td>
+</tr>
+</table>
+
+<script>
+	var app=angular.module("myapp",[])
+	app.controller("myctrl",function($scope){
+		var rec=[ {"Name":"Alfreds Futterkiste","City":"Berlin","Country":"Germany"}, {"Name":"Ana Trujillo Emparedados y helados","City":"México D.F.","Country":"Mexico"}, {"Name":"Antonio Moreno Taquería","City":"México D.F.","Country":"Mexico"}, {"Name":"Around the Horn","City":"London","Country":"UK"}, {"Name":"B's Beverages","City":"London","Country":"UK"}, {"Name":"Berglunds snabbköp","City":"Luleå","Country":"Sweden"}, {"Name":"Blauer See Delikatessen","City":"Mannheim","Country":"Germany"}, {"Name":"Blondel père et fils","City":"Strasbourg","Country":"France"}, {"Name":"Bólido Comidas preparadas","City":"Madrid","Country":"Spain"}, {"Name":"Bon app'","City":"Marseille","Country":"France"}, {"Name":"Bottom-Dollar Marketse","City":"Tsawassen","Country":"Canada"}, {"Name":"Cactus Comidas para llevar","City":"Buenos Aires","Country":"Argentina"}, {"Name":"Centro comercial Moctezuma","City":"México D.F.","Country":"Mexico"}, {"Name":"Chop-suey Chinese","City":"Bern","Country":"Switzerland"}, {"Name":"Comércio Mineiro","City":"São Paulo","Country":"Brazil"} ]
+
+    $scope.records=rec;
+   $scope.addme=function(){
+   	var obj={}
+   	obj.Name=$scope.Name;
+   	obj.City=$scope.City;
+   	obj.Country=$scope.Country;
+   	rec.push(obj)
+
+   } 
+   $scope.deleteuser=function(index){
+			rec.splice(index, 1);
+
+		}
+		$scope.edit=function(user){
+		$scope.Name=user.Name;
+   		$scope.City=user.City;
+   		$scope.Country=user.Country;	
+		}
+		$scope.Editsave=function(){
+       	var obj1={}
+   	obj1.Name=$scope.Name;
+   	obj1.City=$scope.City;
+   	obj1.Country=$scope.Country;
+   	rec.push(obj1)
+	}
+});
+
+</script>
+</body>
+</html>

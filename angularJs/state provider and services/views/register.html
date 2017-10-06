@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>register filter</title>
+</head>
+<body>
+<input type="text" name="" ng-model="namefilters">
+    
+<ul ng-repeat="user in users |filter:namefilters">
+<li >{{user}}</li>
+</ul>
+
+</body>
+</html>

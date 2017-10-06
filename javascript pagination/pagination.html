@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>javascript pagination</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+</head>
+<body>
+<input type="" name="" id="myinput" onkeyup="myFunction()">
+<table class="table table-hover" id="mytable">
+ 
+	<thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody id="tablepagination">
+     
+    </tbody>
+  
+</table>
+<ul id="listdata" >
+	
+</ul>
+<style>
+	ul#listdata li {
+    display: inline-block;
+    margin: 0 2px;
+}
+</style>
+<select id="pageId">
+	<option value="5">5 records</option>
+	<option value="10">10 per page</option>
+	<option value="15">15 per page</option>
+	<option value="20">20 per page</option>
+</select>
+<script>
+//filters functionality
+function myFunction(){
+	var input,filter,table,tr,td,i
+	input=document.getElementById("myinput");
+	filter=input.value.toUpperCase();
+	table=document.getElementById("mytable");
+	tr=table.getElementsByTagName("tr");
+
+				for ( i = 0; i<tr.length; i++) {
+					var tdlength=tr[i].getElementsByTagName("td");
+					for (var j = 0; j< tdlength.length; j++) {
+						td = tr[i].getElementsByTagName("td")[j];
+				    if (td) {
+				      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+				        tr[i].style.display = "";
+
+				      } else {
+				        tr[i].style.display = "none";
+				      }
+				    }
+						
+					}
+					 
+				}
+
+  }
+//select option functionality
+$("#pageId").change(function(){
+	var value=$(this).val();
+	pagenation(value)
+	myfun(0,value,0);
+});
+	var array=[{"id":1,"first_name":"Heather","last_name":"Bell","hobby":"Eating"},
+{"id":2,"first_name":"Andrea","last_name":"Dean","hobby":"Gaming"},
+{"id":3,"first_name":"Peter","last_name":"Barnes","hobby":"Reading Books"},
+{"id":4,"first_name":"Harry","last_name":"Bell","hobby":"Youtubing"},
+{"id":5,"first_name":"Deborah","last_name":"Burns","hobby":"Fishing"},
+{"id":6,"first_name":"Larry","last_name":"Kim","hobby":"Skipping"},
+{"id":7,"first_name":"Jason","last_name":"Wallace","hobby":"Football"},
+{"id":8,"first_name":"Russell","last_name":"Patterson","hobby":"Singing"},
+{"id":9,"first_name":"Heather","last_name":"Bell","hobby":"Eating"},
+{"id":10,"first_name":"Andrea","last_name":"Dean","hobby":"Gaming"},
+{"id":11,"first_name":"Peter","last_name":"Barnes","hobby":"Reading Books"},
+{"id":12,"first_name":"Harry","last_name":"Bell","hobby":"Youtubing"},
+{"id":13,"first_name":"Deborah","last_name":"Burns","hobby":"Fishing"},
+{"id":14,"first_name":"Larry","last_name":"Kim","hobby":"Skipping"},
+{"id":15,"first_name":"Jason","last_name":"Wallace","hobby":"Football"},
+{"id":16,"first_name":"Russell","last_name":"Patterson","hobby":"Singing"}]
+
+// this only for dymanic li buttons
+pagenation(5) // array record ni dividing cheiyadam kosam parameter lo 5no passing in pagenation
+function pagenation(pagelength){	
+var content=""
+var intial=0;
+var len=5;
+
+for ( i = 0;i<array.length/pagelength;i++ ) {
+	content=content+"<li onclick='myfun("+intial+","+len+","+i+")'><button>"+(i+1)+"</button></li>"
+	intial=intial+pagelength;
+	len=len+pagelength;
+}
+$("#listdata").html(content);
+
+}
+
+myfun(0,5,0); // firstpara initalvalue secondparalenvalue thirdpara 1button to delcare 5 tr when its load
+function myfun(startvalue , endvalue,btnid){
+$("li button").attr('disabled',false) // correct button will get disable and other buttons will get enable
+	$("li").eq(btnid).find("button").attr('disabled','disabled') // disable for single button 
+
+	var tablebind=""
+for (var i = startvalue; i < endvalue; i++) {
+ 
+ if (array[i]!=undefined) {
+ 	tablebind=tablebind+"<tr><td>"+array[i].id+"</td>"	+"<td>"+array[i].first_name+"</td>"+"<td>"+array[i].last_name+"</td>"+"<td>"+array[i].hobby+"</td></tr>";
+ }
+}
+
+$("#tablepagination").html(tablebind);
+}
+
+</script>
+</body>
+</html>

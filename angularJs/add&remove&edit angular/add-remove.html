@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.min.js"></script>
+</head>
+<body ng-app="Myapp">
+<div ng-controller="Myctrl">
+<input type="text" name="" ng-model="username">
+<button ng-click="adduser()">Add User</button>
+	<table>
+		<tr><th>Name</th><th>Delete</th></tr>
+		<tr ng-repeat="value in values track by $index">
+		<td>{{value}}</td>
+		<td><button ng-click="deleteuser($index)">delete</button></td>
+		
+		
+			<td><button ng-click="edituser(value)">edit</button></td>
+		</tr>
+	</table>
+
+</div>
+<script type="text/javascript">
+	
+	var app=angular.module("Myapp",[]);
+
+	app.controller("Myctrl",function($scope){
+		var arr=[];
+		$scope.values=arr;
+		$scope.deleteuser=function(index){
+			arr.splice(index, 1);
+
+		}
+		$scope.edituser=function(value){
+             
+          $scope.username=value;
+        
+		}
+
+		$scope.adduser=function(){
+				arr.push($scope.username)
+
+		}
+	})
+</script>
+</body>
+</html>

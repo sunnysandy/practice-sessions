@@ -1,0 +1,40 @@
+.main{
+	background-color: white;
+}
+body{
+	background-color: rgb(245, 213, 191);
+}
+.content {
+margin-top: 200px;
+float: left;
+}
+
+.content h3 {
+margin-left: 305px;
+width: 24%;
+float: left;
+margin-top: -42px;
+}
+.content p {
+width: 17%;
+margin-left: 309px;
+float: left;
+margin-top: 1px;
+}
+.lsp {
+float: right;
+margin-top: -176px;
+margin-right: 286px;
+}
+input[type="submit"] {
+border-radius: 19px;
+width: 76px;
+padding: 6px;
+background-color: rgb(209, 79, 46);
+}
+.image {
+width: 9%;
+margin-top: 117px;
+margin-left: 343px;
+border-radius: 61px;
+}

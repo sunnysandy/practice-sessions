@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>registration page1</title>
+</head>
+<body>
+<table border="1" width="40%">
+	<tr>
+		<td colspan="3"><h1> Registration page</h1></td>
+	</tr>
+	<tr>
+		<td>
+		username</td>
+		<td>
+		<input type="" name="" class="inp" id="inp" onblur="removename()"></td>
+		<td>
+		<div id="usernameError" class="error"></div>
+		</td>
+
+		</tr>
+
+		<tr>
+		<td>password </td>
+		<td><input type="" name="" class="inp1" id="inp1"onblur="clearpassword()"></td>
+		<td>
+		<div id= "password" class="error"></div>
+		</td>
+	</tr>
+	<tr>
+		<td>Retypepassword</td> 
+		<td><input type="" name="" class="inp2" id="inp2" onblur="clearretype()" ></td>
+		<td>
+			<div id="Retype" class="error">
+				
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>Mobile number</td>
+		<td> <input type="" name="" class="inp3" id="inp3" onblur="clearmobile()"></td>
+		<td>
+		<div id="mobilenumber" class="error"></div> 
+		</td>
+	</tr>
+<tr>
+	<td>Emailid</td>
+	<td><input type="" name="" class="inp4" id="inp4" onblur="clearemail()"></td>
+	<td>
+		<div id="email" class="error"></div>
+	</td>
+</tr>
+<tr>
+	<td> Enter Captcha Image </td>
+   <td><input type="" name="" class="inp5" id="inp5"onblur="clearimage()"></td>
+   <td>
+   	<div id="imagetext" class="error"></div>
+   </td>
+</tr>
+<tr>
+<td><input type="button" name="" value="submit" class="sub" onclick="formvalidate()"></td>
+</tr>
+</table>
+<script >
+function formvalidate() {
+	var name=document.getElementById("inp").value;
+	if (name=="") {
+		document.getElementById("usernameError").innerHTML="username cannot be blank";
+	}
+	var password=document.getElementById("inp1").value;
+	if (password=="") {
+		document.getElementById("password").innerHTML="password should not be blank";
+	}
+	var retype=document.getElementById("inp2").value;
+	if (retype=="") {
+		document.getElementById("Retype").innerHTML="enter the retype password";
+	}
+	var mobilenumber=document.getElementById("inp3").value
+	if (mobilenumber=="") {
+        document.getElementById("mobilenumber").innerHTML="enter a mobile number";
+	}
+	var email=document.getElementById("inp4").value;
+	var atpos=email.indexOf("@");
+	var dotpos=email.lastIndexOf(".");
+	if (atpos<1||dotpos<atpos+1||dotpos+2>=email.length)
+	 {
+	 	document.getElementById("email").innerHTML="enter the valid emailid";
+	}
+	var image=document.getElementById("inp5").value;
+		if (image=="") {
+		document.getElementById("imagetext").innerHTML="enter the correct valid image text";
+
+	}
+}
+	
+		
+	function removename(){
+			var name=document.getElementById("inp").value;
+			
+
+	if (name=="") {
+	document.getElementById("usernameError").innerHTML="username cannot be blank";
+		document.getElementById("usernameError").style.display="block";
+			}
+			else{
+			
+		document.getElementById("usernameError").innerHTML="username cannot be blank";
+		document.getElementById("usernameError").style.display="none";
+			}
+
+	}
+
+		function clearpassword(){
+			var password=document.getElementById("inp1").value;
+	if (password=="") {
+		document.getElementById("password").innerHTML="password should not be blank";
+			document.getElementById("password").style.display="block";
+		}
+		else{
+			document.getElementById("password").innerHTML="password should not be blank";
+			document.getElementById("password").style.display="none";
+		}
+	}
+	
+		function clearretype(){
+			var retype=document.getElementById("inp2").value;
+	if (retype=="") {
+		document.getElementById("Retype").innerHTML="enter the retype password";
+					document.getElementById("Retype").style.display="block";
+		}
+		else{
+			document.getElementById("Retype").innerHTML="enter the retype password";
+					document.getElementById("Retype").style.display="none";
+		}
+	}
+		function clearmobile(){
+			var mobilenumber=document.getElementById("inp3").value
+	if (mobilenumber=="") {
+		document.getElementById("mobilenumber").innerHTML="enter a mobile number";
+			document.getElementById("mobilenumber").style.display="block";
+		}
+		else{
+			document.getElementById("mobilenumber").innerHTML="enter a mobile number";
+			document.getElementById("mobilenumber").style.display="none";
+		}
+	}
+		function clearemail(){
+			var email=document.getElementById("inp4").value;
+			var atpos=email.indexOf("@");
+	var dotpos=email.lastIndexOf(".");
+	if (atpos<1||dotpos<atpos+1||dotpos+2>=email.length|| email=="")
+	 {
+	 		document.getElementById("email").innerHTML="enter the valid emailid";
+			document.getElementById("email").style.display="block";
+		}
+		else{
+			document.getElementById("email").innerHTML="enter the valid emailid";
+			document.getElementById("email").style.display="none";
+		}
+	}
+
+		function clearimage(){
+			var image=document.getElementById("inp5").value;
+		if (image=="") {
+			document.getElementById("imagetext").innerHTML="enter the correct valid image text";
+
+			document.getElementById("imagetext").style.display="block";
+		}
+		else{
+			document.getElementById("imagetext").innerHTML="enter the correct valid image text";
+
+			document.getElementById("imagetext").style.display="none";
+		}
+	}
+	
+
+		function clearpassword(){
+			var password=document.getElementById("inp1").value;
+	if (password=="") {
+		document.getElementById("password").innerHTML="password should not be blank";
+			document.getElementById("password").style.display="block";
+		}
+		else{
+			document.getElementById("password").innerHTML="password should not be blank";
+			document.getElementById("password").style.display="none";
+		}
+	}
+	</script>
+<style>
+	.error{
+		color:red;
+	}
+</style>
+
+</body>
+</html>

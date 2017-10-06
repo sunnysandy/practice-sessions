@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login page </title>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+</head>
+<body>
+<table>
+	<tr>
+	    <td>email</td>
+		<td><input type="" name="" id="mail" ></td>
+	</tr>
+	<tr>
+		<td>password</td>
+		<td><input type="" name="" id="password"></td>
+	</tr>
+	<tr>
+		<td><input type="button" name="" value="login" id="logbt"></td>
+	</tr>
+
+</table>
+<script >
+	$(document).ready(function () {
+		$("#logbt").click(function(){
+			console.log(localStorage.getItem("register"))
+			var data=JSON.parse(localStorage.getItem("register"))
+			for (var i = 0; i < data.length; i++) {
+				if(data[i].email==$("#mail").val()&&data[i].pass==$("#password").val()){
+              window.location.href="localstorage3.html";
+
+			}
+			
+		}
+		
+			
+
+		
+
+		});
+	});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>string method</title>
+</head>
+<body>
+<div>
+	<form>
+		<label>username</label>
+		<input type="" value="" id="inp"><br>
+		<div id="name">
+			
+		</div>
+		<label>password</label>
+		<input type= name="" id="inp1" ><br>
+		<label>confrom password</label>
+		<input type="" name="" id="inp2"><br>
+		<input type="button" name="" value="submit" onclick="formvalidate()">
+	</form>
+</div>
+<script>
+	function formvalidate() {
+		var name=document.getElementById("inp").value;
+		var password=document.getElementById("inp1").value;
+		var paatern=/[a-zA-Z]/;
+			
+
+		 if (name.length>6) {
+			document.getElementById("name").innerHTML="username should type upto six values only";
+		}
+		else if(!paatern.test(name)){
+			document.getElementById("name").innerHTML="must be in characters"
+
+		}
+
+		var arrayname=["sachin","sairam"]
+		var array=["red","yellow","orange"]
+		arrayname.push(name)
+		array.pop(password)
+console.log(arrayname);
+	console.log(array);
+	
+	console.log(name.concat(password));
+
+}
+
+	</script>
+	
+	</body>
+	</html>

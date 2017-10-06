@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body ng-app="myApp" ng-controller="namesCtrl">
+
+  <book name="C++" ttt></book>
+  <book name="javascript"></book>
+  <book name="Java"></book>
+  <book name="Mysql"></book>
+  <ul>
+    <li ng-repeat="fruit in fruits" fruitname name="{{fruit}}">{{fruit}}</li>
+  </ul>
+
+<div ng-click="f1()">click</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('namesCtrl', function($scope) {
+  var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+  $scope.fruits=fruits;
+  $scope.f1=function(){
+    alert()
+  }
+})
+
+app.directive("fruitname",function(){
+return{
+  restrict:"EA",
+  template:"<h1 ng-click='f1()'>Fruit: <a href=''>{{name}}</a></h1>",
+  replace:true,
+  scope:{
+      name:"@"
+  },
+  link:function(scope,ele,attr){
+    // ele.bind("click",function(){
+    //   alert(scope.name)
+    // })
+  },
+  controller:function($scope){
+    $scope.f1=function(){
+      alert("i am directive click")
+    }
+  }
+
+}
+
+})
+</script>
+</body>
+</html>

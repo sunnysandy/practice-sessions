@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form validation</title>
+	<link rel="stylesheet" type="text/css" href="screen.css">
+	<style type="text/css">
+form label span{ display: none; color: red; }
+form.cmxform { width: 30em; }
+form.cmxform label {
+	width: auto;
+	display: block;
+	float: none;
+}
+form label.error + label span{ display: block; }
+
+	</style>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script src="jquery.validate.min.js"></script>
+
+</head>
+<body>
+ <form id="signup" method="post" action="">
+ 			
+			<input type="text" name="name" id="name" required minlength="2">
+			<label for="name"><span>please enter your name</span></label>
+			<br>
+			<input type="email" name="email" required>
+			<label for="email">
+			<span>please enter a valid email</span></label>
+			<br>
+			<input type="password" name="password" required> <label for="password"><span>please enter a password</span></label><br>
+			<input type="submit" name="" value="submit" id="sub">
+
+		</form>
+		<script>
+			$(document).ready(function(){
+
+				$("#signup").validate()
+
+				$("#sub").click(function(){
+					
+
+				});
+
+			});
+		</script>
+</body>
+</html>

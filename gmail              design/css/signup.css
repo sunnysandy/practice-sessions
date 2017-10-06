@@ -1,0 +1,116 @@
+body{
+	margin:0;
+	padding:0;
+}
+.header{
+	width: 100%;
+	height:50px;
+	background-color: rgb(241, 241, 241);
+}
+h2{
+	margin:0;
+}
+h2 img{
+	width:9%;
+	margin-top: 13px;
+	float:left;
+}
+
+.input{
+margin-right: 55px;
+margin-top: 18px;
+width: 5%;
+float:right;
+background-color:#4787ed;
+color:white;
+}
+.one{
+	font-family:'Roboto';
+	text-align: center;
+	font-weight: normal;
+	font-size:32px;
+}
+.realtive{
+	position: relative;
+}
+.gmail{
+color: #ADA7A7;
+font-size: 12px;
+top: 7px;
+position: absolute;
+left: 195px;
+}
+.second{
+	width: 25%;
+margin-right: 158px;
+	padding: 20px;
+float:right;
+background-color: rgb(241, 241, 241);
+}
+.second input
+ {
+width: 93%;
+padding: 6px;
+border: 1px solid #E7DEDE;
+}
+.second input.Firstinput
+{
+	width: 133px;
+	margin-left: -4px;
+}
+.second input.lastinput
+{
+	width: 80px;
+margin-left: 9px;
+}
+.second input.monthinput{
+	margin-right: 3px;
+width: 64px;
+}
+.second input.dayinput{
+width:30px;
+}
+.second input.yearinput{
+	width: 75px;
+margin-left: 9px;
+}
+
+.second label{
+	font-weight: normal;
+		margin-top: 1px;
+		font-size: :10px;
+	}
+button{
+	float:right;
+	color:white;
+	background-color: #4787ed;
+	margin-right: 55px;
+}
+	
+	.header1
+	 {
+margin-top: 20px;
+float: left;
+width: 43%;
+}
+
+.three{
+
+	font-family: 'Roboto';
+font-size: 14px;
+font-style: normal;
+font-weight: 100;
+	width: 100%;
+float: left;
+text-align: center;
+margin-top: 6px;
+}
+.grouplap{
+	width: 280px !important;
+height: 20px !important;
+}
+.three img{
+	margin-top:-16px;
+	width:280px;
+	height:200px;
+}

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>slider demo</title>
+  <link rel="stylesheet" href="jquery-ui.min.css">
+  <style>#slider { margin: 10px; }  </style>
+  <script src="jquery-1.12.4.js"></script>
+  <script src="jquery-ui.min.js"></script>
+</head>
+<body>
+ 
+<!-- <div id="slider"></div> -->
+
+<div id="slider">
+  <div id="custom-handle" class="ui-slider-handle"></div>
+</div>
+=<span id="slidervalue"></span>
+<button id="btn">click to move</button>
+ 
+<script>
+// $( "#slider" ).slider();
+
+$( function() {
+    var handle = $( "#custom-handle" );
+
+      $("#btn").click(function(){
+         $("#slider").slider({
+        value: 20,
+        // setup the rest ...
+    });
+         $("#custom-handle").text($("#slider").slider("value")); 
+      })
+
+
+    $( "#slider" ).slider({
+      create: function() {
+        handle.text( $( this ).slider( "value" ) );
+      },
+      slide: function( event, ui ) {
+        handle.text( ui.value );
+        $("#slidervalue").text(ui.value)
+        if(ui.value==20){
+          $("#one").show();
+          
+        }
+        else if(ui.value==40){
+          $("#two").show();
+
+        }
+        else if(ui.value==80){
+          $("#three").show();
+          $("#one").hide();
+          $("#two").hide();
+
+        }
+      }
+    });
+  } );
+
+</script>
+
+<div id="one" style="display: none">
+One
+</div>
+<div id="two"  style="display: none">
+two
+</div>
+<div id="three"  style="display: none">
+Three
+</div>
+ 
+</body>
+</html>

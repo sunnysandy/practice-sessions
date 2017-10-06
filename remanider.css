@@ -1,0 +1,49 @@
+.calender {
+margin-top: 33px;
+margin-left: 10px;
+}
+.emptyinp {
+width: 91%;
+padding: 7px;
+border: 1px solid;
+margin-top: 13px;
+margin-left: 4px;
+}
+.times {
+margin-top: 37px;
+margin-left: 8px;
+}
+.alarm {
+margin-top: 32px;
+margin-left: 2px;
+padding: -6px;
+}
+.loaction {
+margin-top: 35px;
+margin-left: 5px;
+}
+.savebtn {
+width: 31%;
+background-color: pink;
+border-radius: 15px;
+margin-left: 3px;
+margin-top: 32px;
+}
+.cancelbtn {
+width: 33%;
+border-radius: 15px;
+margin-top: 23px;
+background-color: skyblue;
+}
+.header {
+border: 1px solid;
+border-color: blueviolet;
+width: 24%;
+background-color: aqua;
+}
+#alramblock {
+float: right;
+margin-right: -37px;
+margin-top: -24px;
+display: block;
+}

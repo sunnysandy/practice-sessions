@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>even r odd</title>
+</head>
+<body>
+<p Id="even"></p>
+<script>
+var text=""
+var startvalue= prompt("enter the first digit");
+	var length = prompt("enter the last digit ");
+for (i=startvalue; i<length; i++) {
+	if (i%2==0)                  // comments i%2==1 then it ill dislay as odd
+	text +="the number is" +i+"<br>";
+}
+document.getElementById("even").innerHTML=text;
+</script>
+
+</body>
+</html>

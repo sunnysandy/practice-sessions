@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    
+  <script src="/public/js/jquery.validate.min.js"></script>
+
+    <meta charset="utf-8">
+    <title>logiin</title>
+  </head>
+  <body>
+    <form class="login">
+      <label>login</login>
+      <input type="text" name="name" value="" id="login" required>
+      <input type="password" name="password" value="" id="pwd" required>
+      <input type="submit" name="" value="submit" id="btn">
+    </form>
+
+<script>
+$("document").ready(function(){
+$(".login").validate({
+rules:{
+  name:{
+    required:true
+  },
+  password:{
+    required:true
+  }
+},
+messages:{
+  name:{
+    required:"name not matched"
+  },
+  password:{
+    required:"password not matched"
+  }
+}
+});
+$("#btn").click(function(){
+var valid=  $(".login").validate;
+});
+
+$("#btn").click(function(){
+var params={email:$("#login").val(),password:$("#pwd").val()}
+  $.ajax({
+    url:"/login",
+    type:'POST',
+    contentType: "application/json; charset=utf-8",
+
+    data:JSON.stringify(params),
+    dataType:"json",
+    success: function (resp) {
+               console.log(resp)
+               if(resp.status=="OK"){
+                 alert(resp.msg)
+                 window.location.href=resp.url;
+               }
+               else {
+                 alert(resp.msg)
+               }
+           },
+           error: function (jqXHR, textStatus, errorThrown) {
+             console.log(jqXHR);
+               alert("Oops! Something went wrong. Try again later.");
+           }
+
+                });
+});
+});
+</script>
+  </body>
+</html>

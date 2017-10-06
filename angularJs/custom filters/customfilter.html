@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>custom filter</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+</head>
+<body ng-app="myapp" ng-controller="myctrl">
+<ul>
+	<li ng-repeat="name in names | filternames">{{name}}</li>
+</ul>
+<script>
+var app=angular.module("myapp",[]);
+app.controller("myctrl",function($scope){
+
+$scope.names=['amar','sham','jittu','raj','sandhya','shalini','habeeb'];
+
+
+});
+app.filter("filternames",function(){
+	return function(person){
+		var arr=[];
+		for(i=0;i<person.length;i++){
+
+			if (person[i].slice(0,1)=="s") {
+				arr.push(person[i])
+			}
+
+		}
+		return arr;
+	}
+});
+
+</script>
+</body>
+</html>

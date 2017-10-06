@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>input filter</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.min.js"></script>
+
+</head>
+<body ng-app="myapp" ng-controller="myctrl">
+<p><input type="text" name="" ng-model="test"></p>
+
+<table>
+	<tr>
+		<th>name</th><th>mobile</th><th>address</th>
+	</tr>
+	<tr ng-repeat="x in names | filter:test">
+	<td>{{x}}</td>
+			</tr>
+	
+</table>
+<script>
+	var app=angular.module("myapp",[]);
+	app.controller("myctrl",function($scope){
+   $scope.names=['sandeep','ramu','shamu'];
+  
+	});
+
+</script>
+</body>
+</html>

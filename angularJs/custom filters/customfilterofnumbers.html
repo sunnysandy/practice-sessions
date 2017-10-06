@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>custom filter</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+</head>
+<body ng-app="myapp" ng-controller="myctrl">
+<input type="text" name="" ng-model="price">
+<ul>
+	<li ng-repeat="name in names | filternames:price">{{name}}</li>
+</ul>
+<script>
+var app=angular.module("myapp",[]);
+app.controller("myctrl",function($scope){
+
+$scope.names=['100','200','201','210','300'];
+
+
+});
+app.filter("filternames",function(){
+	return function(person,price){
+		var arr=[];
+		
+		if(price==undefined||price=="")
+			{
+           return person;
+
+			}
+          
+
+		for(i=0;i<person.length;i++){
+			
+			 if (person[i]/1>price/1) {
+				arr.push(person[i])
+			}
+
+		}
+		return arr;
+	}
+});
+
+</script>
+</body>
+</html>

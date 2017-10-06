@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>table list</title>
+</head>
+<body>
+<table border="1px">
+<tr>
+	<th>names</th>
+	<th>rollnumber</th>
+	<th>marks</th>
+	</tr>
+	<tr>
+		<td>sandeep</td>
+		<td>121</td>
+		<td><input type="text" name="marks" id="mar"></td>
+		<td>
+			<div id="sandy"> </div>
+		</td>
+		</tr>
+		<tr>
+			<td>sai</td>
+			<td>122</td>
+			<td><input type="text" name="" id="mar1"></td>
+			<td>
+				<div id="sai"></div>
+			</td>
+		</tr>
+		<tr>
+			<td>vishla</td>
+			<td>123</td>
+			<td><input type="text" name="" id="mar2"></td>
+			<td>
+				<div id="vishal"></div>
+			</td>
+		</tr>
+		<tr>
+			<td><input type="button" name="" value="submit" onclick="formvalid()"></td>
+		</tr>
+	</tr>
+</table>
+<script>
+	function formvalid() {
+		var a=document.getElementById("mar").value;
+		if (a>=30){
+			document.getElementById("sandy").innerHTML="passmarks";
+		
+	}
+	else{
+		document.getElementById("sandy").innerHTML="failmarks";
+		
+	}
+	var b=document.getElementById("mar1").value;
+		if (b>=30){
+			document.getElementById("sai").innerHTML="passmarks";
+			
+	}
+	else{
+		document.getElementById("sai").innerHTML="failmarks";
+			
+	}
+	var c=document.getElementById("mar2").value;
+		if (c>=30){
+			document.getElementById("vishal").innerHTML="passmarks";
+			
+	}
+	else{
+		document.getElementById("vishal").innerHTML="failmarks";
+			
+	}
+	}
+
+</script>
+
+</body>
+</html>

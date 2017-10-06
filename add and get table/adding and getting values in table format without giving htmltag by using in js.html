@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>adding and getting </title>
+</head>
+<body>
+NAME<input type="text" name="" value="" id="username"><br>
+Password<input type="text" name="" value="" id="pwd"><br>
+Mobileno<input type="text" name="" value="" id="mbno"><br>
+<input type="button" name="" value="adduser" style="background-color: pink;" id="add" onclick="adduser()"> <input type="button" name="" value="getusers" style="background-color: pink;" id="get" onclick="getusers()">
+<ul>
+	<li><strong>name</strong></li>
+	<li><strong>password</strong></li>
+	<li><strong>mobilenumber</strong></li>
+</ul>
+<div id="table"></div>
+<style >
+ul {
+float: left;
+width: 100%;
+margin: 0;
+}
+	li {
+
+margin-left: 11px;
+float: left;
+width: 89px;
+border: 1px solid;
+padding: 0 10px;
+margin: 0;
+list-style-type: none;
+}
+
+</style>
+<script>
+   var users=[];
+	function adduser() {
+		var name=document.getElementById("username").value; 
+		var Password=document.getElementById("pwd").value;
+		var mobile=document.getElementById("mbno").value; 
+		var user={"name":name,"mobile":mobile,"password":Password};
+
+		users.push(user);
+		
+		console.log(users)
+	}
+
+	function getusers(){
+		var content="";
+		for (i=0;i<users.length;i++){
+			content=content +"<ul><li>"+users[i]["name"]+"</li><li>"+users[i]["mobile"]+"</li><li>"+users[i]["password"]+"</li></ul>"	
+	}
+	document.getElementById("table").innerHTML=content;
+	}
+
+	//tabel.Id.innerHTML("content");
+</script>
+
+</body>
+</html>

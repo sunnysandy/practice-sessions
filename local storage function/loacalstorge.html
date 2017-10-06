@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>registration local storage</title>
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+</head>
+<body>
+<div>
+	<table>
+	<tr>
+	     <td>name</td>
+		<td> <input type="" name="" value="" id="name"></td>
+	</tr>
+		<div id="usename"> </div>
+	  <tr>
+		       <td>emailid</td>
+			<td> <input type="" name="" value="" id="email">
+			</td>
+	  </tr>
+		<div id="emailid"></div>
+		    <tr>
+		           <td>password</td>
+			      <td><input type="" name="" value="" id="pwd"></td>
+			     <div id="password"></div>
+		    </tr>
+		        <tr>
+		           <td>repassword</td>
+			      <td><input type="" name="" value="" id="repwd"></td>
+			       <div id="repassword"></div>
+		        </tr>
+		            <tr>
+
+			         <td><input type="button" name="" value="submit" id="btn"></td>
+			            
+		           </tr>
+		      <tr>
+	
+			      <td><input type="button" name="" value="reset" id="reset"></td>
+			      
+		      </tr>
+		      <div id="local"></div>
+		</table>
+		
+	
+</div>
+<script type="text/javascript">
+    var register=[];
+	$(document).ready(function () {
+		$("#btn").click(function(){
+			var checkname=$("#name").val()
+			if (checkname=="") {
+				$("#usename").append("username cant be empty")
+				$("#usename").css({"display":"block"})
+			}
+            else{
+            	$("#usename").append("username cant be empty")
+				$("#usename").css({"display":"none"})
+            }
+
+		var email=$("#email").val();
+	   var atpos=email.indexOf("@");
+	   var dotpos=email.lastIndexOf(".");
+	if (atpos<1||dotpos<atpos+1||dotpos+2>=email.length)
+	   {
+	 	$("#emailid").append("enter the valid emailid");
+	 	$("#emailid").css({"display":"block"})
+
+	    }
+	    else{
+	    	$("#emailid").append("enter the valid emailid");
+	 	    $("#emailid").css({"display":"none"})
+
+	     }
+
+	      
+			var pass=$("#pwd").val()
+			if (pass=="") {
+				$("#password").append("password cant be empty")
+				$("#password").css({"display":"block"})
+			}
+			else{
+                 $("#password").append("password cant be empty")
+				$("#password").css({"display":"none"})
+			    }
+
+                var repass=$("#repwd").val()
+			
+			    if (repass!=pass) {
+				$("#repassword").append("paasword didnt match")
+				$("#repassword").css({"display":"block"})
+			}
+             
+                var obj={"checkname":checkname,"email":email,"pass":pass,"repass":repass}
+		        register.push(obj);
+		        console.log(obj)
+		        if (typeof(Storage) !== "undefined"){
+		        	localStorage.setItem("register",JSON.stringify(register))
+		        //$("#local").append({"localStorage.setItem"("register")})
+		    }
+		    window.location.href="loginlocalstroage.html";
+		});
+		$("#reset").click(function(){
+			$("#name,#email,#pwd,#repwd").val("")
+
+		});
+
+	});
+</script>
+</body>
+</html>

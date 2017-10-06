@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+ 
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title>table bootstarp</title>
+
+</head>
+<body>
+<div class="row col-lg-10 col-lg-offset-0">
+<div class="table-responsive">
+<table class="table table-bordered" id="binding">	
+<tr >
+		<th>#</th>
+		<th>name</th>
+		<th>location</th>
+		<th>country</th>
+		<th>pincode</th>
+		<th>edit</th>
+		<th>delete</th>
+		<th><input type="button" name="" value="add" data-toggle="modal" data-target="#addpopup"></th>
+</tr>
+		
+
+
+	<tr>
+		<th>1</th>
+
+			<td class="name">sandeep</td>
+			<td class="location">hyderabad</td>
+			<td class="country">india</td>
+			<td class="pincode">500086</td>
+			
+			<td><button type="button" class="edit" data-toggle="modal" data-target="#editpopup"><span class="glyphicon glyphicon-pencil"></span></button>
+			<button type="button"  class="save" style="display: none;"><span class="glyphicon glyphicon-ok"></span></button>
+	<button type="button"  class="cancel" style="display: none;"><span class="glyphicon glyphicon-remove"></span></button></td>
+			<td><button type="button"  class="delete"><span class="glyphicon glyphicon-trash"></span></button></td>
+
+
+			
+	</tr>
+	
+<tr>
+<th>2</th>
+	<td class="name">sai</td>
+	<td class="location">newyork</td>
+	<td class="country">america</td>
+	<td class="pincode">3200</td>
+	
+			<td><button type="button" class="edit" data-toggle="modal" data-target="#editpopup"><span class="glyphicon glyphicon-pencil"></span></button>
+			<button type="button"  class="save" style="display: none;"><span class="glyphicon glyphicon-ok"></span></button>
+	<button type="button"  class="cancel" style="display: none;"><span class="glyphicon glyphicon-remove"></span></button></td>
+			<td><button type="button"  class="delete"><span class="glyphicon glyphicon-trash"></span></button></td>
+
+						
+			
+</tr>
+
+<tr>
+<th>3</th>
+	<td class="name">vishal</td>
+	<td class="location">perth</td>
+	<td class="country">australia</td>
+	<td class="pincode">35936</td>
+
+
+			<td><button type="button" class="edit" data-toggle="modal" data-target="#editpopup"><span class="glyphicon glyphicon-pencil"></span></button>
+			<button type="button"  class="save" style="display: none;"><span class="glyphicon glyphicon-ok"></span></button>
+	<button type="button"  class="cancel" style="display: none;"><span class="glyphicon glyphicon-remove"></span></button></td>
+			<td><button type="button"  class="delete"><span class="glyphicon glyphicon-trash"></span></button></td>			
+</tr>
+</table>
+</div>
+</div>
+    <!-- Start Modal box -->
+<div class="modal fade" id="editpopup" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+           <td><input type="text" name="" id="name"></td>
+            <td><input type="text" name="" id="location"></td>
+            <td><input type="text" name="" id="country"></td>
+            <td><input type="text" name="" id="pincode"></td> 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="save" data-dismiss="modal">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <!--end model box-->
+     <!-- Start Modal box2 -->
+<div class="modal fade" id="addpopup" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+            <td><input type="text" name="" id="name1"></td>
+            <td><input type="text" name="" id="location1"></td>
+            <td><input type="text" name="" id="country1"></td>
+            <td><input type="text" name="" id="pincode1"></td>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="adding" data-dismiss="modal">add new record</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <!--end model box2-->
+<script>
+	$(document).ready(function(){
+      
+        
+        
+		$(".delete").click(function(){
+			$(this).closest("tr").hide()
+
+		});
+   $(".edit").click(function(){
+   	$(this).closest("tr").addClass("active");
+   var name=$(this).closest("tr").find(".name").text();
+   var location=$(this).closest("tr").find(".location").text();
+   var country=$(this).closest("tr").find(".country").text();
+   var pincode=$(this).closest("tr").find(".pincode").text();
+  $(this).closest("tr").find(".save").show();
+  $(this).closest("tr").find(".cancel").show();
+
+ $("#name").val(name);
+  $("#location").val(location);
+ $("#country").val(country);
+ $("#pincode").val(pincode);
+$(this).hide()
+   });
+  
+
+$("#save").click(function(){
+    var bindtr="<td>"+$("#name").val()+"</td>"+"<td>"+$("#location").val()+"</td>"+"<td>"+$("#country").val()+"</td>"+"<td>"+$("#pincode").val()+"</td>";
+	$("tr.active").find(".name").text($("#name").val())
+	$("tr.active").find(".location").text($("#location").val())
+	$("tr.active").find(".country").text($("#country").val())
+	$("tr.active").find(".pincode").text($("#pincode").val())
+	$("tr.active").find(".edit").show();
+	$("tr.active").find(".save").hide();
+	$("tr.active").find(".cancel").hide();
+	
+	
+});
+$(".cancel").click(function(){
+$(this).hide();
+$(this).closest("tr").find(".edit").show();
+$(this).closest("tr").find(".save").hide();
+
+$("#name").val("");
+  $("#location").val("");
+ $("#country").val("");
+ $("#pincode").val("");
+});
+var i=3; 
+$("#adding").click(function(){ 
+i++
+
+var bindtr="<tr><td>"+i+"</td><td class='name'>"+$("#name1").val()+"</td>"+"<td class='location'>"+$("#location1").val()+"</td>"+"<td class='country'>"+$("#country1").val()+"</td>"+"<td class='pincode'>"+$("#pincode1").val()+"</td><td><button type='button' class='edit' data-toggle='modal' data-target='#editpopup'><span class='glyphicon glyphicon-pencil'></span></button><button type='button'  class='save' style='display: none;'><span class='glyphicon glyphicon-ok'></span></button><button type='button' class='cancel' style='display: none;'><span class='glyphicon glyphicon-remove'></span></button><td><button type='button' class='delete'><span class='glyphicon glyphicon-trash'></span></button></td></tr>"+"</tr>";
+$("#binding").append(bindtr);
+ $(".edit").click(function(){
+   	$(this).closest("tr").addClass("active");
+   var name=($(this).closest("tr").find(".name").text());
+   var location=($(this).closest("tr").find(".location").text());
+   var country=($(this).closest("tr").find(".country").text());
+   var pincode=($(this).closest("tr").find(".pincode").text());
+  $(this).closest("tr").find(".save").show();
+  $(this).closest("tr").find(".cancel").show();
+
+ $("#name").val(name);
+  $("#location").val(location);
+ $("#country").val(country);
+ $("#pincode").val(pincode);
+$(this).hide()
+   });
+ $("#save").click(function(){
+    var bindtr="<td>"+$("#name").val()+"</td>"+"<td>"+$("#location").val()+"</td>"+"<td>"+$("#country").val()+"</td>"+"<td>"+$("#pincode").val()+"</td>";
+	$("tr.active").find(".name").text($("#name").val())
+	$("tr.active").find(".location").text($("#location").val())
+	$("tr.active").find(".country").text($("#country").val())
+	$("tr.active").find(".pincode").text($("#pincode").val())
+	$("tr.active").find(".edit").show();
+	$("tr.active").find(".save").hide();
+	$("tr.active").find(".cancel").hide();
+	
+	
+});
+
+
+$(".cancel").click(function(){
+$(this).hide();
+$(this).closest("tr").find(".edit").show();
+$(this).closest("tr").find(".save").hide();
+
+$("#name").val("");
+  $("#location").val("");
+ $("#country").val("");
+ $("#pincode").val("");
+});
+});
+	});
+</script>
+</body>
+
+</html>

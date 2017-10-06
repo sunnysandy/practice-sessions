@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+	<title>angularedit add and delete</title>
+</head>
+<body ng-app="myapp" ng-controller="myctrl">
+<table class="table">
+	<thead>
+		<tr>
+			<th>
+				name
+			</th>
+			<th>country</th>
+			<th>pincode</th>
+			<th><button ng-click="add()">addbutton</button></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+		<td><label>filter-name:</label><input type="text" name="" ng-model="f.name"></td>
+          <td><label>filter-country:</label><input type="text" name="" ng-model="f.country"></td>
+          <td><label>filter-pincode:</label><input type="text" name="" ng-model="f.pincode"></td>
+		</tr>
+		<tr>
+		<td><input type="text" name="" ng-model="namedata"></td>	
+		<td><input type="text" name="" ng-model="countrydata"></td>
+		<td><input type="text" name="" ng-model="pincodedata"></td>
+		</tr>
+		<tr ng-repeat="user in users|filter:f">
+		<td>{{user.name}}</td><td>{{user.country}}</td><td>{{user.pincode}}</td>
+		
+		<td><button ng-click="edit(user)">edit</button></td>
+		<td><button ng-click="delete($index)">delete</button></td>
+		<td><button ng-click="updateRec($index)">save</button></td>
+		</tr>
+	</tbody>
+</table>
+<script>
+	var app=angular.module("myapp",[])
+	app.controller("myctrl",function($scope){
+  var arr=[]
+  $scope.users=arr;
+  $scope.add=function(){
+  var obj={}	
+  obj.name=$scope.namedata;
+  obj.country=$scope.countrydata;
+  obj.pincode=$scope.pincodedata;
+   	arr.push(obj)  
+   }
+  $scope.edit=function(user){
+  $scope.namedata=user.name;
+  	$scope.countrydata=user.country;
+  	$scope.pincodedata=user.pincode;
+  }
+  $scope.delete=function(index){
+			$scope.users.splice(index, 1);
+
+		}
+		
+
+		$scope.updateRec=function(index){
+			arr[index].name=$scope.namedata;
+			arr[index].country=$scope.countrydata;
+			arr[index].pincode=$scope.pincodedata;			
+		}
+	})
+</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+table{
+	width: 100%;
+	margin-left: -9px;
+}
+
+.reg {
+border: 1px dotted black;
+font-size: 26px;
+font-weight: bold;
+margin-left: 38px;
+color: rgb(255, 137, 246);
+padding-left:160px;
+}
+.use {
+border: 1px dotted black;
+font-weight: bold;
+}
+.inp {
+width: 20%;
+margin-left: 82px;
+}
+.pwd {
+font-weight: bold;
+border: 1px dotted black;
+}
+.inp1 {
+margin-left: 86px;
+width: 20%;
+}
+.rtp {
+font-weight: bold;
+border: 1px dotted black;
+}
+.inp2 {
+width: 20%;
+margin-left: 34px;
+}
+.Mobile {
+font-weight: bold;
+border: 1px dotted black;
+}
+.inp3 {
+margin-left: 42px;
+width: 20%;
+}
+.mail {
+border: 1px dotted black;
+font-weight: bold;
+}
+.inp4 {
+margin-left: 94px;
+width: 20%;
+}
+.eci{
+	border: 1px dotted black;
+font-weight: bold;
+}
+.inp5 {
+margin-left: 4px;
+width: 20%;
+}
+.sub {
+margin-left: 151px;
+width: 7%;
+padding: 5px;
+background-color: skyblue;
+}

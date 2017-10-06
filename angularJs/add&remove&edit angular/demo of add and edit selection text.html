@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+	<title>select text using add button and append to textarea</title>
+</head>
+<body ng-app="myapp" ng-controller="myctrl">
+<input type="text" name="" ng-model="input">
+<button ng-click="add()">addbutton</button>
+<button ng-click="update()">save</button>
+<div>
+	<ul ng-repeat="user in users  track by $index">
+		
+		<li><textarea>{{user}}</textarea><button ng-click="edit(user)">edit</button> <button ng-click="delete($index)">delete</button></li>
+		
+	</ul>
+</div>
+<script>
+	var app=angular.module("myapp",[])
+	app.controller("myctrl",function($scope){
+         var arr=[]                 
+        $scope.users=arr;
+  
+$scope.add=function(){
+         arr.push($scope.input)
+         }
+$scope.edit=function(user){
+
+	$scope.input=user;
+}
+$scope.delete=function(index){
+	arr.splice(index,1)
+}
+$scope.update=function(){
+    arr.push($scope.input)
+	}
+})
+
+
+</script>
+</body>
+</html>

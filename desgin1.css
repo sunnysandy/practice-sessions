@@ -1,0 +1,49 @@
+.header{
+width:100%;
+}
+h1{
+padding: 9px;
+width :50%;
+float:left;
+}
+.nav{
+float: right;
+padding: 20px;
+margin-top:16px;
+}
+.nav li{
+display:inline-block;
+
+}
+.nav a{
+color: lightgray;
+padding: 9px;
+text-decoration:none;
+}
+.button{
+background-color:skyblue;
+border-radius:20px;
+color:white;
+}
+.head2{
+margin-left: -60px;
+clear: both;
+text-align: center;
+font-size: 30px;
+font-weight: normal;
+}
+.first{
+width:100%;
+}
+.one{
+margin-top: 20px;
+margin-left: 133px;
+margin-right: 53px;
+width: 27%;
+outline-style: solid;
+outline-color: whitesmoke;
+float: left;
+padding: 30px;
+text-align: justify
+}
+

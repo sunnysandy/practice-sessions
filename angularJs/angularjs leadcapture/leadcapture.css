@@ -1,0 +1,123 @@
+.lead {
+background-color: rgb(163, 184, 211);
+color: white;
+width: 100%;
+padding: 17px;
+font-size: 28px;
+margin-left: -10px;
+}
+.main h3{
+color: rgba(197, 192, 192, 0.72);
+margin-top: 47px;
+}
+.head {
+background-color: rgb(234, 239, 246);
+width: 87%;
+padding: 18px;
+}
+.a{
+background-color: rgba(203, 219, 238, 0.67);
+padding: 18px;
+text-decoration: underline;
+font-style: italic;
+font-weight: bold;
+float: right;
+margin-right: 86px;
+margin-top: -58px;
+width: 13px;
+}
+}
+.sucess{
+background-color: rgb(234, 239, 246);
+width: 91%;
+padding: 18px;
+}
+.h {
+width: 87%;
+margin-top: -28px;
+margin-right: 66px;
+}
+.at{
+	color: rgba(197, 192, 192, 0.72);
+margin-top: 47px;
+}
+.checkboxes {
+font-weight: bold;
+margin-left: -5px;
+margin-top: 33px;
+color: rgba(128, 125, 125, 0.71);
+}
+.video {
+margin-top: 35px;
+margin-left: -8px;
+font-size: 106%;
+color: gray;
+}
+.but{
+	color: rgba(75, 74, 74, 0.52);
+margin-top: 47px;
+
+}
+.label {
+margin-top: 40px;
+margin-left: -5px;
+}
+.lab {
+background-color: rgba(209, 230, 236, 0.68);
+width: 14%;
+padding: 16px;
+font-weight: bold;
+}
+.opt {
+padding: 17px;
+background-color: rgb(204, 223, 248);
+border: none;
+margin-left: -10px;
+width: 5%;
+text-decoration: underline;
+font-weight: bold;
+}
+
+
+.cricle {
+padding: 12px;
+width: 137px;
+float: right;
+margin-top: 30px;
+height: 100px;
+border-radius: 50%;
+}
+.squ {
+width: 15%;
+padding: 13px;
+float: right;
+}
+.image {
+width: 3%;
+padding: 13px;
+margin-top: 34px;
+margin-bottom: -26px;
+border-radius: 50px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+label {
+    width: 20px;
+    height: 20px;
+    background: red;
+    display: inline-block;
+    border-radius: 50%;
+    border: 3px solid #E4E4E4;
+    padding: 2px;
+    margin: 2px;
+}
+
+input:checked + label {
+    background: #fff; 
+    border-radius: 2px;
+}
+.btnshape {
+margin-top: 45px;
+}

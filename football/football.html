@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>football</title>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<style type="text/css">
+	.innerDiv {
+    float: left;
+    width: 40px;
+    min-height: 300px;
+}
+.innerDiv img {
+    float: left;
+    width: 100%;
+   
+    
+}
+button.mybtn {
+    float: right;
+    margin-right: 158px;
+}
+button.firstclick {
+    float: right;
+    margin-right: 158px;
+}
+</style>
+</head>
+<body>
+<div>
+	<button class="firstclick">btn1</button>
+</div>
+
+<div>
+	<button class="mybtn" data-no=2>btn2</button>
+</div>
+<div>
+	<button class="mybtn" data-no=3>btn3</button>
+</div>
+<div>
+	<button class="mybtn" data-no=4>btn4</button>
+</div>
+<div>
+	<button class="mybtn" data-no=5>btn5</button>
+</div>
+<div>
+	<img src="img.png" width="30px" height="40px" style="position: absolute;left: 0px" class="firstimg"> 
+<img src="img.png" width="30px" height="40px"  style="position: absolute;left: 100px">
+</div>
+<div class="myimg" >
+
+	</div>
+
+
+
+<script >
+
+$(".firstclick").click(function(){
+$(".firstimg").animate({left: '100px'})
+$(".firstimg").fadeOut();
+	})
+	$(".mybtn").click(function(){
+        //$(".myimg").html("");
+		var count=$(this).attr("data-no");
+		
+		var content="<div class='innerDiv'>"
+		
+		for ( i = 0; i < count; i++) {
+			content=content+'<img src="img.png"width="30px" height="40px" >'
+			
+		}
+		content=content+"</div>"
+		$(".myimg").append(content);
+	})
+</script>
+</body>
+</html>

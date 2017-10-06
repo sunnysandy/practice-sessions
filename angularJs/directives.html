@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body ng-app="myApp">
+
+
+
+<div class="w3testdirective" text="1" satus="true"></div>
+<div class="w3testdirective" text="2"></div>
+<div class="w3testdirective" text="3"></div>
+
+
+<script>
+var app = angular.module("myApp", []);
+app.directive("w3testdirective", function() {
+    return {
+        restrict : "C",
+        replace:true,
+        template : "<h1>Made by a directive!</h1>",
+        /*scope:{
+        	text:"@",
+        	satus:"@",
+        	//=
+        	//&
+
+        },*/
+         link:function(scope,ele,att){
+         ele.bind("click",function(){
+         	alert(scope.satus+"-->"+scope.text)
+         })
+        
+        
+        }
+    };
+});
+</script>
+
+<p><strong>Note:</strong> By setting the <strong>restrict</strong> property to "A", only the HTML element with the "w3-test-directive" attribute has invoked the directive.</p>
+
+</body>
+</html>

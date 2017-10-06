@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+ 
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<title>table with radio</title>
+</head>
+<body>
+<table class="table table-hover">
+<tr>
+<th></th>
+<th style="color: skyblue;">Name<span class="glyphicon glyphicon-menu-down"></span></th>
+<td>POLICY<span class="glyphicon glyphicon-menu-down"></span></td>
+<td>POLICY STATUS<span class="glyphicon glyphicon-menu-down"></span></td>
+<td>DESTINATION<span class="glyphicon glyphicon-menu-down"></span></td>
+<td>STATUS<span class="glyphicon glyphicon-menu-down"></span></td>
+<td>PROGRESS<span class="glyphicon glyphicon-menu-down"></span></td>
+</tr>	
+<tr>
+
+<td><label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions" class="radiobtn"> 
+	</label>
+   </td>
+
+
+	<td class="name">ramu</td>
+
+	<td class="amount">$20,000</td>
+	<td class="polstatus">Approved</td>
+	<td class="destination">HUSTON,US</td>
+	<td class="status">canceled</td>
+	<td class="cancel">cancelled</td>
+			<td><button type="button" class="edit" data-toggle="modal" data-target="#editpopup" style="display: none;"><span class="glyphicon glyphicon-pencil"></span></button></td>
+			<td><button type="button"  class="delete" style="display: none;"><span class="glyphicon glyphicon-trash"></span></button></td>
+<!-- this is for select -->
+<!--<td><button type="button" class="menulist" data-toggle="lists"><span class="glyphicon glyphicon-option-horizontal"></button>
+		<ul class="list" style="display: none; position: absolute;" ><li><label>stauts</label><select class="opt"><option>cancel</option><option>approved</option><option>waiting</option></select>
+<label>policy status</label><select class="policy"><option>cancel</option><option>approved</option><option>waiting</option></select>
+		</li></ul>
+		</td>-->
+
+<!--this is for bootstrap dropdown model-->
+	<td>
+
+	<div class="dropdown">
+  <a href="#" class="dropdown-toggle" id="drop4" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Dropdown <span class="caret"></span> </a>
+  <ul class="dropdown-menu" class="menu1" aria-labelledby="drop4"> <li>
+  <label>staus</label>
+  <a class="linkstatus" href="#">approved</a></li>
+   <li><a class="linkstatus" href="#"> cancel</a></li>
+    <li><a class="linkstatus" href="#">waiting</a></li>
+
+    <li>
+    <label>policystaus</label>
+  <a class="linkstatus1" href="#">approved</a></li>
+   <li><a class="linkstatus1" href="#"> cancel</a></li>
+    <li><a class="linkstatus1" href="#">waiting</a></li>
+    </ul>
+</div>
+		</td>
+<!--end-->
+		</tr>
+		<tr>
+
+	<td><label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions" class="radiobtn"> 
+	</label>
+   </td>
+
+	<td class="name">laxman</td>
+
+	<td class="amount">$30,000</td>
+	<td class="polstatus">Approved</td>
+	<td class="destination">newyork,US</td>
+	<td class="status">waiting</td>
+	<td class="cancel">waited</td>
+			<td><button type="button" class="edit" data-toggle="modal" data-target="#editpopup" style="display: none;"><span class="glyphicon glyphicon-pencil"></span></button></td>
+			<td><button type="button"  class="delete" style="display: none;"><span class="glyphicon glyphicon-trash"></span></button></td>
+	<!-- this is for select -->
+<!--<td><button type="button" class="menulist" data-toggle="lists"><span class="glyphicon glyphicon-option-horizontal"></button>
+		<ul class="list" style="display: none; position: absolute;" ><li><label>stauts</label><select class="opt"><option>cancel</option><option>approved</option><option>waiting</option></select>
+<label>policy status</label><select class="policy"><option>cancel</option><option>approved</option><option>waiting</option></select>
+		</li></ul>
+		</td>-->
+
+<!-- start this is for bootstrap dropdown model-->
+	<td>
+
+	<div class="dropdown">
+  <a href="#" class="dropdown-toggle" id="drop4" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Dropdown <span class="caret"></span> </a>
+  <ul class="dropdown-menu" class="menu1" aria-labelledby="drop4"> <li>
+  <label>staus</label>
+  <a class="linkstatus" href="#">approved</a></li>
+   <li><a class="linkstatus" href="#"> cancel</a></li>
+    <li><a class="linkstatus" href="#">waiting</a></li>
+
+    <li>
+    <label>policystaus</label>
+  <a class="linkstatus1" href="#">approved</a></li>
+   <li><a class="linkstatus1" href="#"> cancel</a></li>
+    <li><a class="linkstatus1" href="#">waiting</a></li>
+  </ul>
+</div>
+		</td>
+		</tr>
+<!--end-->
+	</table>
+	<!-- Start Modal box -->
+			<div class="modal fade" id="editpopup" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+           <td><input type="text" name="" id="name"></td>
+            <td><input type="text" name="" id="amount"></td>
+            <td><input type="text" name="" id="polstatus"></td>
+            <td><input type="text" name="" id="destination"></td> 
+            <td><input type="text" name="" id="status"></td>
+            <td><input type="text" name="" id="cancel"></td>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="save" data-dismiss="modal">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <script>
+  	$(document).ready(function(){
+  		$('.dropdown-toggle').dropdown()
+     $(".radiobtn").click(function(){
+     	$(this).closest("tr").find(".edit").show();
+     	$(this).closest("tr").find(".delete").show();
+     });
+   $(".edit").click(function(){
+   	$(this).closest("tr").addClass("active");
+   var name=$(this).closest("tr").find(".name").text();
+   var amount=$(this).closest("tr").find(".amount").text();
+   var polstatus=$(this).closest("tr").find(".polstatus").text();
+   var destination=$(this).closest("tr").find(".destination").text();
+   var status=$(this).closest("tr").find(".status").text();
+   var cancel=$(this).closest("tr").find(".cancel").text();
+
+  $("#name").val(name);
+  $("#amount").val(amount);
+  $("#polstatus").val(polstatus);
+  $("#destination").val(destination);
+  $("#status").val(status);
+  $("#cancel").val(cancel);
+     });
+   $(".delete").click(function(){
+   	$(this).closest("tr").hide();
+   });
+
+$("#save").click(function(){
+    var bindtr="<td>"+$("#name").val()+"</td>"+"<td>"+$("#location").val()+"</td>"+"<td>"+$("#country").val()+"</td>"+"<td>"+$("#pincode").val()+"</td>";
+	$("tr.active").find(".name").text($("#name").val())
+	$("tr.active").find(".amount").text($("#amount").val())
+	$("tr.active").find(".polstatus").text($("#polstatus").val())
+	$("tr.active").find(".destination").text($("#destination").val())
+   	$("tr.active").find(".status").text($("#status").val())
+	$("tr.active").find(".cancel").text($("#cancel").val())
+
+	
+	
+});
+//this is for select list functionality
+ /* $(".menulist").click(function(){
+   	$(this).closest("tr").find(".list").toggle();
+   });
+   $(".opt").on('change',function(){
+   	$(this).closest("tr").addClass("active");
+   	var exchange=$(".opt option:selected").text();
+   $("tr.active").find(".status").text(exchange)
+    });
+
+   $(".policy").on('change',function(){
+   	$(this).closest("tr").addClass("active");
+   	var exchange1=$(".policy option:selected").text();
+   $("tr.active").find(".polstatus").text(exchange1)
+    });*/
+
+			    // this bottom function for dropdown list
+			$(".linkstatus").click(function(){
+				var a=$(this).text()
+				$(this).closest("tr").find(".status").text(a);
+			});
+			$(".linkstatus1").click(function(){
+				var b=$(this).text()
+				$(this).closest("tr").find(".polstatus").text(b);
+			});
+
+   });
+  </script> 
+
+</body>
+</html>

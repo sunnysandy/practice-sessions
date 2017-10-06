@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>events action</title>
+</head>
+<body>
+<div>
+	<h1>check the emailid</h1>
+	<label>email</label>
+	<input type="text" name="" placeholder="@gmail.com" id="email">
+	<h2>check the password</h2>
+	<label>password</label><br>
+	<input type="submit" name="" value="" id="pwd">
+	<h3>check the checkbox</h3>
+	<input type="checkbox" name="" id="box">i agree the all conditions of email<br>
+	<input type="button" name="" value="login" onclick="validate()">
+</div>
+<script>
+	function validate() {
+var mail=document.getElementById("email").value;
+var atpos=mail.indexOf("@");
+var dotpos=mail.lastIndexOf(".");
+if (atpos<1||dotpos<atpos+1||dotpos+2>=mail.length) {
+	alert("not a valid email address")
+}
+var password=document.getElementById("pwd").value;
+if (password=="") {
+	alert("enter a valid password")
+}
+var checkbox=document.getElementById("box").checked;
+if (checkbox=="") {
+	alert("accept the box")
+}
+	}
+</script>
+
+
+</body>
+</html>

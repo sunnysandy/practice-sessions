@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>add,edit,delete</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+ 
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+</head>
+<body ng-app="myapp" ng-controller="mycontroller">
+<div class="container">
+<hr>
+  <button type="button" class="btn btn-info btn-lg pull-right" data-toggle="modal" data-target="#myModal" >adduser</button>
+<h2>All users</h2>
+<span class="clearfix"></span>
+<hr>
+<div class="alert  alert-info" ng-if="message">
+<a href="#" class="close"  ng-click="clearmessage()">&times;</a>
+  {{message}}
+</div>
+
+<input type="text" name="" ng-model="search"> <!--coustom filter-->
+          
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>INDEX</th>
+        <th>USERNAME</th>
+        <th>EMAIL</th>
+        <th>EDIT</th>
+        <th>DELETE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="user in users|filter:search">
+        <td>{{$index+1}}.</td>
+        <td>{{user.username}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.fullname}}</td>
+  <td><button type="button" class="btn btn-info btn-lg " data-toggle="modal" data-target="#myModaledit" ng-click="edit(user)">edit</button>
+         </td>
+        <td>
+        	<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModaldelete" ng-click="delete($index)">delete</button>
+        </td>
+      </tr>
+      
+   </tbody>
+  </table>
+
+<div class="container">
+ 
+  
+  
+  <!-- Modal for adduser -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">add new user</h4>
+        </div>
+        <div class="modal-body">
+           <form class="form-horizontal">
+						<div class="form-group">
+					  <label class="control-label col-sm-2" >username</label>
+						 <div class="col-sm-10">
+						    <input type="text" class="form-control" ng-model="newusername">
+						   </div>
+						  </div>
+
+						 <div class="form-group">
+					  <label class="control-label col-sm-2" >email</label>
+						 <div class="col-sm-10">
+						    <input type="text" class="form-control" ng-model="newuseremail" >
+						   </div>
+						  </div>
+
+                  	<div class="form-group">
+					  <label class="control-label col-sm-2" >fullname</label>
+						 <div class="col-sm-10">
+						    <input type="text" class="form-control" ng-model="newuserfullname">
+						   </div>
+						  </div>
+
+
+						  <div class="form-group"> 
+              <div class="col-sm-offset-2 col-sm-10">
+       <button type="submit" class="btn btn-default" ng-click="add()" data-dismiss="modal">addvalues</button>
+               </div>
+                  </div>
+                  </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+   
+   <!-- Modal for edituser-->
+  <div class="modal fade" id="myModaledit" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">edit user</h4>
+        </div>
+        <div class="modal-body">
+           <form class="form-horizontal">
+						<div class="form-group">
+					  <label class="control-label col-sm-2" >username</label>
+						 <div class="col-sm-10">
+						    <input type="text" class="form-control" ng-model="clickuserusername">
+						   </div>
+						  </div>
+
+						 <div class="form-group">
+					  <label class="control-label col-sm-2" >email</label>
+						 <div class="col-sm-10">
+						    <input type="text" class="form-control" ng-model="clickuseremail">
+						   </div>
+						  </div>
+
+                  	<div class="form-group">
+					  <label class="control-label col-sm-2" >fullname</label>
+						 <div class="col-sm-10">
+						    <input type="text" class="form-control" ng-model="clickuserfullname">
+						   </div>
+						  </div>
+
+
+						  <div class="form-group"> 
+              <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default" ng-click="updateuser(user)" data-dismiss="modal">Editsave</button>
+               </div>
+                  </div>
+                  </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+
+      <!-- Modal for delete user -->
+  <div class="modal fade" id="myModaldelete" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">ARE YOU SURE </h4>
+        </div>
+        <div class="modal-body">
+		      <STRONG style="color: red"> 
+		      you going to delete{{"user.fullname"+"user.username"+"user.email"}}.All infromation..
+		      </STRONG>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="deleteuser()">yes</button>
+           <button type="button" class="btn btn-default" data-dismiss="modal">no</button>
+        
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+<script>
+	
+	var app=angular.module("myapp",[]);
+	app.controller("mycontroller",function($scope){
+      
+         
+			var rec=[
+			{username:"sandeep", fullname:"ashagari",email:"ashagari.sandeep@gmail.com"},
+			{username:"rama", fullname:"cingi",email:"rama@gmail.com"},
+			{username:"krishna", fullname:"reddy",email:"krishna@gmail.com"}
+
+			];
+  
+      $scope.users=rec;
+			$scope.add=function(){
+       var addobj={}
+      addobj.username=$scope.newusername;
+       addobj.fullname=$scope.newuserfullname;
+       addobj.email=$scope.newuseremail;
+        rec.push(addobj)
+				   $scope.message="newuser added sucessfully!";
+			};
+
+				$scope.edit=function(user){
+				   $scope.clickuserusername=user.username;
+           $scope.clickuserfullname=user.fullname;
+           $scope.clickuseremail=user.email;
+
+
+            $scope.updateuser=function(user){
+           
+           user.username=$scope.clickuserusername;
+           user.fullname=$scope.clickuserfullname;
+           user.email=$scope.clickuseremail;
+           
+           $scope.message="editvalue added sucessfully!";
+
+      }
+        	}
+
+		  //   $scope.deleteuser=function(){
+    //      $scope.users.splice($scope.users.indexOf($scope.clickuser),1);
+    //       $scope.message="delete sucessfully!";
+		  // };
+     $scope.delete=function(index){
+      $scope.users.splice(index, 1);
+
+    }
+
+		 $scope.clearmessage=function(){
+		 	$scope.message="";
+		 };
+
+		 	});
+</script>
+
+   </body>
+</html>

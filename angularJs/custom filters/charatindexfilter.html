@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.min.js"></script>
+
+	<title>apply uppercase and to choosen of index position</title>
+</head>
+<body ng-app="myapp" ng-controller="myctrl">
+<input type="text" name="" ng-model="test">
+<ul>
+	<li ng-repeat="user in users|indexcapitalfilter:test">{{user}}</li>
+</ul>
+<script>
+	var app=angular.module("myapp",[]);
+	app.controller("myctrl",function($scope){
+   $scope.users=['amar','sham','jittu','raj','sandhya','shalini','habeeb'];
+	});
+	app.filter("indexcapitalfilter",function(){
+		return function(input,position){
+	     var arr=[];
+	     var capletter=input.charAt(position).toUpperCase();
+	     for(var i=0;i<input.length;i++){
+
+	     	if (i==position) {
+	     		arr.push(capletter);
+	     	}
+	     	else{
+	     		arr.push(input[i]);
+	     	}
+	     }		
+      arr=arr.join("");
+      return arr;
+			}
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>addpage</title>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+</head>
+<body>
+<table>
+	<tr>
+		<td>mobile</td>
+		<td><input type="text" name="" id="mobile"></td>
+	</tr>
+	<tr>
+		<td>collegename</td>
+		<td><input type="text" name="" id="college"></td>
+	</tr>
+	<tr>
+		<td>address</td>
+		<td><input type="textarea" name="" id="address"></td>
+	</tr>
+	<tr>
+		<td>city</td>
+		<td><input type="text" name="" id="city"></td>
+	</tr>
+	<tr>
+		<td>state</td>
+		<td><input type="text" name="" id="state"></td>
+	</tr>
+	<tr>
+	
+		<td><input type="button" name="" value="add" id="addbtn"></td>
+	</tr>
+	<tr>
+		<td><input type="button" name="" value="remove" id="del"></td>
+	</tr>
+
+	</table>
+	<ul>
+	  <li><strong>name</strong></li>
+	  <li><strong>password</strong></li>
+	  <li><strong>mobilenumber</strong></li>
+   </ul>
+   <div id="table"></div>
+<style >
+ul {
+float: left;
+width: 100%;
+margin: 0;
+}
+	li {
+
+margin-left: 11px;
+float: left;
+width: 89px;
+border: 1px solid;
+padding: 0 10px;
+margin: 0;
+list-style-type: none;
+}
+
+</style>
+	<script >
+	var users=[]
+	$(document).ready(function(){
+		$("#addbtn").click(function(){
+			var a=$("#mobile").val()
+			var b=$("#address").val()
+			var c=$("#city").val()
+			var d=$("#state").val()
+
+			 var obj={"a":a,"b":b,"c":c,"d":d}
+			 users.push(obj)
+			 console.log(obj)
+			 var content="";
+			for (i=0;i<users.length;i++){
+		content=content +"<ul><li>"+users[i]["a"]+"</li><li>"+ users[i]["b"]+"</li><li>"+users[i]["c"]+"</li><li>"+users[i]["d"]+
+		"</li></ul>"
+	
+			}
+			
+        $("#table").append(content)
+       
+     	});
+     	
+     	});	
+	/*$(document).ready(function(){
+	$("#del").click(function(){
+		
+			var a=$("#mobile").val()
+			var b=$("#address").val()
+			var c=$("#city").val()
+			var d=$("#state").val()
+
+			 var obj={"a":a,"b":b,"c":c,"d":d}
+			 users.push(obj)
+			 console.log(obj)
+			 var content="";
+			for (i=0;i<users.length;i++){
+		content=content +"<ul><li>"+users[i]["a"]+"</li><li>"+ users[i]["b"]+"</li><li>"+users[i]["c"]+"</li><li>"+users[i]["d"]+
+		"</li></ul>"
+	
+			}
+			 $("#table").remove(content)
+
+			
+			});
+		});*/
+	
+	</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>index html</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+   <script src="script/config.js"></script>
+</head>
+<body ng-app="myapp">
+<header>
+	<ul>
+		<li ><a href="#/!">Login</a></li>
+		<li ><a href="#!signup">Register</a></li>
+		<li ><a href="#!dashboard">Dashboard</a></li>
+	
+	</ul>
+</header>
+<section>
+	<div ng-view></div>
+</section>
+<footer>
+	@copyright2017
+</footer>
+
+</body>
+</html>

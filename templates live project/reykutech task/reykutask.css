@@ -1,0 +1,339 @@
+
+nav.navbar.navbar-inverse {
+    background-color: white;
+    border: none;
+     margin-top: -34px;
+}
+img {
+    width: 9%;
+    height: 53px;
+}
+a.navbar-brand h4 {
+    margin-top: 37px;
+    font-size: 20px;
+    font-style: italic;
+    color: black;
+    font-family: initial;
+}
+span.righttext {
+    color: black;
+    font-family: monospace;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+span.glyphicon.glyphicon-chevron-down.itemsarrow{
+    color: rgba(0, 0, 0, 0.66);
+}
+
+button.letsbtn {
+    color: black;
+    background-color: white;
+    border: 2px solid rgba(236, 13, 52, 0.76);
+    padding: 8px;
+    font-size: 11px;
+    font-weight: bold;
+    font-family: serif;
+    margin-top: -11px;
+        padding-left: 26px;
+    padding-right: 22px;
+}
+span.btntxt {
+    margin-right: 6px;
+    font-family: fantasy;
+    letter-spacing: 1px;
+    font-size: 10px;
+}
+  .col-lg-8.imgsize{
+     padding-left: 33px;
+    padding-right: 7px;
+}
+img.imgbg {
+    width: 149%;
+    height: 1%;
+    padding-top: 4px;
+}
+.imgcontent {
+    margin-left: -227px;
+    margin-top: 126px;
+}
+h3.headtxt {
+    color: white;
+    font-size: 50px;
+    font-family: sans-serif;
+    font-weight: bold;
+    width:73%;
+}
+p.paratxt {
+    color: black;
+    font-size: 14px;
+    margin-top: 28px;
+    width: 75%;
+}
+button.pickbtn {
+    background-color: transparent;
+    color: black;
+    padding: 10px;
+    border: 1px solid white;
+    font-size: 10px;
+    padding-right: 32px;
+    padding-left: 28px;
+    margin-top: 31px;
+    font-family: fantasy;
+}
+i.fa.fa-chevron-right.direction {
+    padding-left: 4px;
+}
+
+div#strationcontent {
+  
+    padding-right: 121px;
+}
+.col-lg-4.txtsixborder {
+    border-bottom: 1px solid rgba(236, 13, 52, 0.76);
+    border-right: 1px solid rgba(0, 0, 0, 0.17);
+    padding: 13px;
+    margin-top: -62px;
+    background-color: white;
+}
+h4.strationhead {
+    font-size: 20px;
+    font-family: fantasy;
+    color: black;
+}
+.col-lg-4.membershipborder {
+    border: 1px solid rgba(0, 0, 0, 0.17);
+    padding: 13px;
+    margin-top:-63px;
+    background-color: white;
+}
+.col-lg-4.isophitborder {
+    border: 1px solid rgba(0, 0, 0, 0.17);
+    padding-bottom: 37px;
+    padding-top: 11px;
+    margin-top: -64px;
+    background-color: white;
+}
+span.startiontxt {
+    color: rgba(105, 105, 105, 0.86);
+    font-size: 15px;
+    font-family: serif;
+}
+img.thirdimg {
+    width: 100%;
+    height: 486px;
+}
+.radiobtn {
+    float: right;
+    margin-right: 180px;
+}
+span.txtcolor {
+    color: rgba(204, 21, 29, 0.82);
+}
+h3.txt {
+    font-size: 48px;
+    font-weight: bold;
+    color: black;
+    font-family: sans-serif;
+    font-variant: discretionary-ligatures;
+    padding-top: 31px;
+    width: 50%;
+}
+p.imgpara {
+    font-family: serif;
+    color: gray;
+    width: 62%;
+    font-weight: 500;
+    font-size: 16px;
+    padding-top: 23px;
+}
+p.imgpara1 {
+    font-family: serif;
+    color: gray;
+    width: 65%;
+    font-weight: 500;
+    font-size: 17px;
+    padding-top: 16px;
+}
+.row.content {
+    padding-top: 143px;
+    background-color: #EFEDEF;
+    width: 97%;
+    margin-left: 19px;
+    margin-top: -50px;
+}
+.row.tableimg {
+    background-color: #EFEDEF;
+    margin-top: 0px;
+    width: 97%;
+    margin-left: 19px;
+}
+.col-lg-8.tablecontent {
+    background-image: url(images/fourthimage.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 468px;
+    opacity: 0.7;
+    background-repeat: no-repeat;
+    margin-top: 104px;
+}
+table.table.tableborder {
+    width: 71%;
+    margin-left: 180px;
+    border: 1px solid dimgray;
+    margin-top: 30px;
+}
+h3.todayhead {
+    color: white;
+    text-align: center;
+    font-size: 43px;
+    font-family: fantasy;
+    margin-top: 75px;
+}
+span.scheduletxt {
+    color: red;
+}
+tr.thbg {
+    color: black;
+    background-color: white;
+    font-family: monospace;
+    font-weight: bold;
+}
+tr.tdtext {
+    color: white;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 14px;
+}
+button.signbtn {
+    background-color: black;
+    border: 1px solid red;
+    font-family: monospace;
+    padding: 2px;
+}
+button.tablebtn {
+    font-size: 12px;
+    font-family: fantasy;
+    padding: 8px;
+    margin: auto;
+    display: block;
+    background-color: transparent;
+    color: white;
+    border: 1px solid red;
+    margin-top: -90px;
+    margin-right: -314px;
+    padding-left: 32px;
+    padding-right: 27px;
+}
+.row.latestblogcontent {
+    background-color: #EFEDEF;
+    width: 97%;
+    margin-left: 19px;
+    padding-bottom: 90px;
+}
+h3.latesttxt {
+    color: black;
+    text-align: center;
+    font-size: 40px;
+    font-family: fantasy;
+    letter-spacing: 3px;
+    margin-top: 75px;
+    padding-bottom: 23px;
+}
+span.blogtxt {
+    color: rgba(236, 13, 52, 0.78);
+}
+ #bgcolor {
+    background-color: white;
+    padding: 24px;
+   }
+#bgcolorrgt {
+    background-color: white;
+    padding: 24px;
+    margin-left: 9px;
+    border-bottom: 1px solid rgba(236, 13, 52, 0.91);
+}
+#bgcolorrgt2 {
+    background-color: white;
+    padding: 24px;
+    margin-left: 9px;
+    margin-top: 17px;
+}
+#bgcolorlft {
+    background-color: white;
+    padding: 24px;
+    margin-top: 18px;
+}
+img.img5lft {
+    float: left;
+    width: 100px;
+    height: 104px;
+}
+.textcontentlft {
+    float: left;
+    padding-left: 21px;
+}
+p.publishedtxt {
+    color: gray;
+    font-family: serif;
+    font-size: 14px;
+}
+span.colortxt {
+    color: rgba(236, 13, 13, 0.91);
+}
+  .headingtxt{
+    color: black;
+    font-family: fantasy;
+    width: 71%;
+    font-size: 20px;
+    margin-top: -10px;
+}
+.pargraphtxt{
+	    color: gray;
+    font-family: cursive;
+    font-size: smaller;
+}
+
+p.hourtxt {
+    font-family: fantasy;
+    color: rgba(245, 245, 245, 0.48);
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+span.footertxt {
+    font-family: cursive;
+    font-size: 12px;
+    color: white;
+}
+span.footertxtline{
+    font-family: cursive;
+    font-size: 12px;
+    color: white;
+    text-decoration: underline;
+}
+p.footertxt {
+    font-family: cursive;
+    font-size: 12px;
+    color: white;
+}
+.row.footercontent {
+    background-color: rgba(230, 21, 21, 0.79);
+    width: 97%;
+    padding: 40px;
+    margin-left: 20px;
+    margin-top: 0px;
+}
+.bottomline {
+    border: 1px solid rgba(245, 245, 245, 0.43);
+    margin-top: 133px;
+    width: 80%;
+    margin-left: 14px;
+}  
+p.copytxt{
+  padding-top: 14px;
+    padding-left: 11px;
+    margin-bottom: -11px;
+}
+i.fa.fa-copyright {
+    color: white;
+}

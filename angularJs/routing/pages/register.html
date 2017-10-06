@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+	<title>login</title>
+</head>
+<body ng-app="myapp" ng-controller="myctrl"
+<label>USerNAMe:</label>
+<input type="text" name="" >
+<br>
+<label>Password:</label>
+<input type="password" name="">
+<br>
+<label>conformpassword</label>
+<input type="password" name="">
+<br>
+<input type="button" name="" value="submit" ng-click="submitform()">
+<script >
+
+var app=angular.module("myapp",[]);
+app.controller("myctrl",function($scope,$http){
+$scope.submitform=function(){
+ $http({
+    method : "post",
+    url : "register.html"
+  }).then(function mySuccess(response) {
+		console.log(response)
+    $location.search(login.html);
+    }, function myError(response) {
+      $scope.myWelcome = response.statusText;
+  });
+}
+
+});
+
+</script>
+</body>
+</html>

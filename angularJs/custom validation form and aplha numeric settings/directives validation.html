@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+	<title>custom validation</title>
+  <style type="text/css">
+    .active{
+      width:100%; height:200px; background:red;
+    }
+  </style>
+</head>
+<body ng-app="myapp" ng-controller="myctrl" ng-class="{'active':mystles}" >
+<input type="text"  name="" mobilevalidate="num" maximumcharacter="10" minimumcharacter="5" ng-model="mobileno" >
+<input type="text" name="" emailvalidate ng-model="emailid" >
+<input type="password" name="" passwordvalidate ng-model="passwordkey">
+<input type="submit" name="" ng-model="mybtn" ng-click="sub()">
+
+
+<button ng-click="Mydivshow=!Mydivshow">show</button>
+<!--hide and show div by clicking--> 
+<div ng-if="Mydivshow">
+  testing div
+</div>
+<script>
+	var app=angular.module("myapp",[]);
+  app.controller("myctrl",function($scope){
+  $scope.sub=function(){
+    $scope.mystles=true // css puprose 
+  var mobile= $scope.mobileno;
+  var reg=/^[0-9]+$/
+  if (!reg.test(mobile)) {
+    alert("enter a valid number")
+  }
+  else if (mobile.length>5 &&mobile.length<10) {
+    alert("suceesmobileno");
+  }
+  else{
+    alert("invalid mobileno");
+  }
+
+var passkey=$scope.passwordkey;
+var alphanum=/^([a-zA-Z0-9 _-]+)$/
+if (passkey=="" || passkey==undefined) {
+  alert("password not be empty");
+}
+else if(!alphanum.test(passkey)){
+alert("sucess password")
+}
+else{
+  alert("password must be in characters and alpha , numeric")
+}
+
+
+var emailId=$scope.emailid;
+alert(emailId)
+  var atpos=emailId.indexOf("@");
+  var dotpos=emailId.lastIndexOf(".");
+
+  if (emailId=="" ||emailId==undefined) {
+    alert("email should not be empty ")
+   }
+
+  else if (atpos<1||dotpos<atpos+1||dotpos+2>=emailId.length)
+   {
+  
+  alert("email is not valid")
+
+   }
+   else
+   alert  ("email is valid")
+ }
+ });
+
+	/*app.directive("mobilevalidate",function () {
+    return{
+
+      restrict:"A",
+
+    
+    link:function(scope,ele,attr){
+     ele.bind("mouseout",function(){
+     var max=attr.maximumcharacter;
+     var min=attr.minimumcharacter;
+     var reg=/^[0-9]+$/   //only numeric  functionality
+
+ if (!reg.test(ele.val())) {
+
+		alert("enter only numbers")
+	}
+
+    else if (ele.val().length<min || ele.val().length>max) {
+     	alert()
+     }  
+     
+	 })
+
+    }
+}
+ });
+//password
+	app.directive("passwordvalidate",function () {
+    return{
+
+      restrict:"A",
+
+    
+    link:function(scope,ele,attr){
+     ele.bind("mouseout",function(){
+     var alphaandnum=/^([a-zA-Z0-9 _-]+)$/  //aplha and   numeric  functionality
+
+     if (ele.val()=="") {
+     	alert("password should not be empty")
+     }
+    
+else if (alphaandnum.test(ele.val())) {
+
+		alert("enter aphlabetcis and numbers")
+	}
+	else alert("valid password")
+
+	   })
+
+    }
+}
+ });
+
+
+   app.directive("emailvalidate",function(){
+		 return{
+		 	restrict:"A",
+link:function(scope,ele,attr){
+   ele.bind("mouseout",function(){
+
+var email=ele.val();
+	var atpos=email.indexOf("@");
+	var dotpos=email.lastIndexOf(".");
+
+	if (email=="") {
+   	alert("email should not be empty ")
+   }
+
+	else if (atpos<1||dotpos<atpos+1||dotpos+2>=email.length)
+	 {
+	
+  alert("email is not valid")
+
+   }
+   else
+   alert	("email is valid")
+   
+})
+  
+}
+  }
+
+	});*/   
+</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<title>texteditor</title>
+</head>
+<body>
+<div>
+<div class="bold">
+	<input type="button" name="" value="B">
+	</div>
+	<span id="head">hi hello</span>
+
+	</div>
+<div>
+	<select class="wordsize">
+		<option value="30px">large</option><option value="40px">x-large</option><option value="45px">45px</option>
+	</select>
+</div>
+<!--<input type="button" name="" value="listchange" id="list">-->
+<ul class="listitem">
+<li>1</li>
+<li>A</li>
+</ul>
+<script>
+
+	$("document").ready(function(){
+
+    $(".bold").click(function(){
+
+            console.log(getSelectedText());
+
+    $("#head").css({"font-weight":"bold"});
+
+
+});
+    $(".wordsize").change(function(){
+
+    var a=$("#head").css({"font-size":$(this).val()});
+
+});
+$(".listitem").Click(function() {
+
+    var text = $(".head").val();
+
+    var li = "<li>" + text + </li>;
+
+    $(".listitem").appendChild(li);
+
+});
+	function getSelectedText() {
+    var text = '';
+
+    if (window.getSelection) {
+        text = window.getSelection().toString();
+    }
+    else if (document.selection && document.selection.type != "Control") {
+        text = document.selection.createRange().text;
+    }
+
+    return text;
+}
+</script>
+</body>
+</html>
